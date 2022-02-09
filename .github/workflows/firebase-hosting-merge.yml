@@ -18,8 +18,8 @@ jobs:
         with:
           flutter-version: 2.10.0
       # - run: flutter pub get
-      - run: flutter analyze
-      - run: flutter test
+      # - run: flutter analyze
+      # - run: flutter test
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
