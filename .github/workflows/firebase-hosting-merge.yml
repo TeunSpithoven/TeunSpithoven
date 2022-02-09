@@ -7,10 +7,9 @@ name: Deploy to Firebase Hosting on merge
     branches:
       - main
 jobs:
-  name: flutter build
-    # The type of runner that the job will run on
+  build_and_deploy:
     runs-on: ubuntu-latest
-    env:
+      env:
       JAVA_VERSION: "11.0"
       FLUTTER_VERSION: "2.10.0"
     steps:
@@ -24,13 +23,6 @@ jobs:
       - run: flutter pub get
       - run: flutter analyze
       - run: flutter test
-
-  build_and_deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: cd portfolio
-      - run: flutter run
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
