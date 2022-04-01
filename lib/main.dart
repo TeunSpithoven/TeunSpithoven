@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -12,7 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: _title,
       home: Scaffold(
-        appBar: AppBar(title: const Text(_title)),
+        appBar: AppBar(
+          title: const Text(_title),
+          backgroundColor:Color.fromRGBO(59, 96, 100, 100)
+        ),
         body: const MyStatelessWidget(),
       ),
     );
@@ -26,8 +31,9 @@ class MyStatelessWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Card(
+        color: Color.fromRGBO(135, 187, 162, 100),
         child: InkWell(
-          splashColor: Colors.blue.withAlpha(30),
+          splashColor: Color.fromRGBO(201, 228, 202, 100),
           onTap: () {
             debugPrint('Card tapped.');
           },
