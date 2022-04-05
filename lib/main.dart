@@ -13,19 +13,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: _title,
+      color: Color.fromRGBO(201, 228, 202, 100),
       home: Scaffold(
         appBar: AppBar(
           title: const Text(_title),
           backgroundColor:Color.fromRGBO(59, 96, 100, 100)
         ),
-        body: const MyStatelessWidget(),
+        body: const BodyWidget(),
       ),
     );
   }
 }
 
-class MyStatelessWidget extends StatelessWidget {
-  const MyStatelessWidget({Key? key}) : super(key: key);
+class BodyWidget extends StatelessWidget {
+  const BodyWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
