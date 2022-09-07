@@ -1,2 +1,2 @@
 portfolio
-hosted on firebase hosting at https://portfolioteunspithoven.web.app
+hosted on firebase hosting at https://teun.web.app
