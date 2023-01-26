@@ -1,201 +1,164 @@
 <!DOCTYPE html>
-<html>
-<title>Teun Spithoven</title>
-<title>Website Name</title>
-<meta content="Teun Spithoven" property="og:title" />
-<meta content="Portfolio van mijn ICT avonturen tot nu toe" property="og:description" />
-<meta content="https://teun.firebaseapp.com/" property="og:url" />
-<meta content="https://teun.firebaseapp.com/assets/teun portret.jpg" property="og:image" />
-<meta content="#43B581" data-react-helmet="true" name="theme-color" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./style/scrollbar.css">
-<link rel="stylesheet" href="./style/parallax.css">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-</style>
-<body class="w3-black">
+<html lang="en">
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<!-- <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center"> -->
-  <!-- Avatar image in top left corner -->
-  <!-- <img src="./assets/teun portret.jpg" style="width:100%">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>ABOUT</p>
-  </a>
-  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-eye w3-xxlarge"></i>
-    <p>PROJECTS</p>
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>CONTACT</p>
-  </a>
-</nav> -->
+<head>
+  <title>Teun Spithoven</title>
+  <title>Website Name</title>
+  <meta content="Teun Spithoven" property="og:title" />
+  <meta content="Portfolio van mijn ICT avonturen tot nu toe" property="og:description" />
+  <meta content="https://teun.firebaseapp.com/" property="og:url" />
+  <meta content="https://teun.firebaseapp.com/assets/teun portret.jpg" property="og:image" />
+  <meta content="#43B581" data-react-helmet="true" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
-  </div>
-</div>
+  <link href="../dist/style.css" rel="stylesheet">
+</head>
 
-<!-- Page Content -->
-<div class="parallax"></div>
-<div class="w3-padding-large" id="main">
+<body class="bg-fixed bg-no-repeat bg-cover bg-bottom" style="background-image: url(./assets/cloudsmetteun.jpg)">
+  
+  <!-- Page Content -->
   <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo"><span class="w3-hide-small"></span> 
+  <header class="flex flex-col gap-4 mt-60 pl-16 items-left" id="home">
+    <h1 class="grow text-7xl font-bold underline"><span class="w3-hide-small"></span>
       <!-- <img src="./assets/Teun Spithoven.png"> -->
       Teun Spithoven
     </h1>
     <p>Software Engineering Student</p>
   </header>
-
-  <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">About me</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p>
-      In 2020, I started my IT yourney at Fontys. They showed me some different workfields in IT during the first
-       semester and in the end py preference was at software engineering, and that's what I have been doing from
-       that moment forward. The goal of creating this portfolio
-       is to create a summary of my Software Engineering yourney.
-    </p>
-    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
-    <p class="w3-wide">Web Application Development</p>
-    <p class="w3-wide">Vue Js</p>
-    <p class="w3-wide">C#</p>
-    <p class="w3-wide">Python</p>
-    <br>
-  </div>
   
-  <!-- Portfolio Section -->
-  <div class="w3-padding-64 w3-content" id="photos">
-    <h2 class="w3-text-light-grey">My Projects</h2>
-    <hr style="width:200px" class="w3-opacity">
+  <div class="columns-1 mt-96 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" id="main">
+    <!-- About Section -->
+    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+      <h2 class="w3-text-light-grey">About me</h2>
+      <hr class="w3-opacity">
+      <p>
+        In 2020, I started my IT yourney at Fontys. They showed me some different workfields in IT during the first
+        semester and in the end py preference was at software engineering, and that's what I have been doing from
+        that moment forward. The goal of creating this portfolio
+        is to create a summary of my Software Engineering yourney.
+      </p>
+      <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
+      <p class="w3-wide">Web Application Development</p>
+      <p class="w3-wide">Vue Js</p>
+      <p class="w3-wide">C#</p>
+      <p class="w3-wide">Python</p>
+      <br>
+    </div>
 
-    <!-- Grid for photos -->
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half">
-        <h3 class="w3-text-light-grey">Euro to Dollar converter</h3>
+    <!-- Portfolio Section -->
+    <div class="w3-padding-64 w3-content" id="photos">
+      <h2 class="w3-text-light-grey">My Projects</h2>
+      <hr class="w3-opacity">
+
+      <!-- Grid for photos -->
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <h3 class="w3-text-light-grey">Euro to Dollar converter</h3>
           <p>
             In my first semester I learned my first programming language: C#. During this semester
             I learned about programming
             by making practical assignments, by making an application that converts euros to dollars
             for example.
           </p>
-          <img src="./assets/S1/eurodollarconverter.png" style="width:100%">
+          <img src="./assets/S1/eurodollarconverter.png" alt="euro to dollar converter screenshot">
+        </div>
+        <div class="w3-half">
+          <h3 class="w3-text-light-grey">Shop register system</h3>
+          <p>
+            After making more of these little assignments i made my final project of
+            my first semester. It is a shopping system that has a shopping cart and
+            check out simulation.
+          </p>
+          <img src="./assets/S1/winkel2.png" alt="windows forms shopping app">
+          <img src="./assets/S1/betalen.png" alt="paying screen in windows forms shopping app">
+        </div>
+        <div class="w3-half">
+          <h3 class="w3-text-light-grey">StudyCluster</h3>
+          <p>
+            In the second half of the first semester I participated in a group project
+            where I made a electronic learning enviroment for schools with 5 other classmates. In
+            this assignment we made a class diagram for our .NET OOP application.
+            This assignment also was the first time that I worked with a database.
+          </p>
+          <img src="./assets/S1/classdiagram.png" alt="class diagram">
+          <img src="./assets/S1/eloscheduleitemform.png" alt="ELO schedule">
+          <img src="./assets/S1/elohomepage.png" alt="ELO homepage">
+        </div>
+        <div class="w3-half">
+          <h3 class="w3-text-light-grey">Circustrain</h3>
+          <p>
+            In semester 2 of the study, i wrote a program that sorts circus animals into train wagons
+            in the most efficcient way, without braking any of the given rules. My application
+            designing skills improved a lot because of this exercice.
+          </p>
+          <img src="./assets/S2/circustreinflowchart.png" alt="flowchart">
+        </div>
+        <div class="w3-half">
+          <h3 class="w3-text-light-grey">Dream Journal</h3>
+          <p>
+            In semester 2 I had my first encounter with UI design and multi-layered applications.
+            I made an app that can be used to keep track of the dreams you had and
+            see the dreams your friends had.
+          </p>
+          <img src="./assets/S2/dreamyournaluidesign.png" alt="dream yournal app design">
+        </div>
+        <div class="w3-half">
+          <h3 class="w3-text-light-grey">Bolus calculator</h3>
+          <p>
+            In semester 2 I also did a group project for the company philips, we made
+            a distributed application with a typescript frontend and typescript backend,
+            those layers communicate through express. During this project I also learned how to
+            write unit tests.
+          </p>
+          <img src="./assets/S2/jest.png" alt="jest tests">
+        </div>
+        <div class="w3-half">
+          <h3 class="w3-text-light-grey">Ninja Game</h3>
+          <p>
+            In my third semester I made a web application with python, Django, Node and VueJs.
+            For this distributed web app I made one frontend application with Vuejs and two different
+            Django backends. One for handling user authentication and the saving of used data, and the
+            other one as my game server. This game server uses a websocket for fast back and forth
+            communication between client and server.
+            My software testing skills improved a lot during this project, I wrote unit, integration and e2e tests.
+            I used cypress to test my frontend. All of these tests where automatically run after pushing changes to
+            my github repository because of the CI/CD configuration I set up there.
+          </p>
+          <img src="./assets/S3/CICD.png" alt="github actions CI/CD">
+        </div>
+        <!-- End photo grid -->
       </div>
-      <div class="w3-half">
-        <h3 class="w3-text-light-grey">Shop register system</h3>
-        <p>
-          After making more of these little assignments i made my final project of
-           my first semester. It is a shopping system that has a shopping cart and
-           check out simulation.
-        </p>
-        <img src="./assets/S1/winkel2.png" style="width:100%">
-        <img src="./assets/S1/betalen.png" style="width:100%">
-      </div>
-      <div class="w3-half">
-        <h3 class="w3-text-light-grey">StudyCluster</h3>
-        <p>
-          In the second half of the first semester I participated in a group project
-           where I made a electronic learning enviroment for schools with 5 other classmates. In
-           this assignment we made a class diagram for our .NET OOP application.
-           This assignment also was the first time that I worked with a database.
-        </p>
-        <img src="./assets/S1/classdiagram.png" style="width:49.9%">
-        <img src="./assets/S1/eloscheduleitemform.png" style="width:49%">
-        <img src="./assets/S1/elohomepage.png" style="width:100%">
-      </div>
-      <div class="w3-half">
-        <h3 class="w3-text-light-grey">Circustrain</h3>
-        <p>
-          In semester 2 of the study, i wrote a program that sorts circus animals into train wagons
-           in the most efficcient way, without braking any of the given rules. My application
-           designing skills improved a lot because of this exercice.
-        </p>
-        <img src="./assets/S2/circustreinflowchart.png" style="width:100%">
-      </div>
-      <div class="w3-half">
-        <h3 class="w3-text-light-grey">Dream Journal</h3>
-        <p>
-          In semester 2 I had my first encounter with UI design and multi-layered applications.
-           I made an app that can be used to keep track of the dreams you had and
-           see the dreams your friends had.
-        </p>
-        <img src="./assets/S2/dreamyournaluidesign.png" style="width:100%">
-      </div>
-      <div class="w3-half">
-        <h3 class="w3-text-light-grey">Bolus calculator</h3>
-        <p>
-          In semester 2 I also did a group project for the company philips, we made
-           a distributed application with a typescript frontend and typescript backend,
-           those layers communicate through express. During this project I also learned how to
-           write unit tests.
-        </p>
-        <img src="./assets/S2/jest.png" style="width:100%">
-      </div>
-      <div class="w3-half">
-        <h3 class="w3-text-light-grey">Ninja Game</h3>
-        <p>
-          In my third semester I made a web application with python, Django, Node and VueJs.
-           For this distributed web app I made one frontend application with Vuejs and two different
-           Django backends. One for handling user authentication and the saving of used data, and the
-           other one as my game server. This game server uses a websocket for fast back and forth
-           communication between client and server.
-           My software testing skills improved a lot during this project, I wrote unit, integration and e2e tests.
-           I used cypress to test my frontend. All of these tests where automatically run after pushing changes to
-           my github repository because of the CI/CD configuration I set up there.
-        </p>
-        <img src="./assets/S3/CICD.png" style="width:100%">
-      </div>
-    <!-- End photo grid -->
+      <!-- End Portfolio Section -->
     </div>
-  <!-- End Portfolio Section -->
-  </div>
 
-  <!-- Contact Section -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <h2 class="w3-text-light-grey">Contact Me</h2>
-    <hr style="width:200px" class="w3-opacity">
+    <!-- Contact Section -->
+    <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+      <h2 class="w3-text-light-grey">Contact Me</h2>
+      <hr class="w3-opacity">
 
-    <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Eersel, NL</p>
-      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +31 6 19518380</p>
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: teun.spithoven@mail.com</p>
-  <!-- End Contact Section -->
-  </div>
-  
-    <!-- Footer -->
-  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-    <a target="_blank" href="https://github.com/TeunSpithoven"><i class="fa fa-github w3-hover-opacity"></i></a>
-    <a target="_blank" href="https://www.instagram.com/teun.spithoven/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-    <a target="_blank" href="https://www.linkedin.com/in/teun-spithoven/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-  <!-- End footer -->
-  </footer>
+      <div class="w3-section">
+        <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Eersel, NL</p>
+        <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +31 6 19518380</p>
+        <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: teun.spithoven@mail.com
+        </p>
+        <!-- End Contact Section -->
+      </div>
 
-<!-- END PAGE CONTENT -->
-</div>
+      <!-- Footer -->
+      <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+        <a href="https://github.com/TeunSpithoven" title="github" target="_blank" rel="noopener noreferrer"><i
+            class="fa fa-github w3-hover-opacity"></i></a>
+        <a href="https://www.instagram.com/teun.spithoven/" title="instagram" target="_blank"
+          rel="noopener noreferrer"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        <a href="https://www.linkedin.com/in/teun-spithoven/" title="linkedIn" target="_blank"
+          rel="noopener noreferrer"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+        <!-- End footer -->
+      </footer>
+
+      <!-- END PAGE CONTENT -->
+    </div>
 
 </body>
+
 </html>
