@@ -6,3 +6,5 @@ TODO:
 optioneel: andere foto of geanimeerde zwevende wolkjes
 
 teunspithoven.nl
+
+om tailwind te draaien: npx tailwindcss -i ./public/style.css -o ./dist/style.css --watch
