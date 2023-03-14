@@ -35,9 +35,9 @@ export default function Home() {
             <p>
               In 2020, I started my IT journey at Fontys. They showed me some
               different workfields in IT during the first semester and in the
-              end my preference was software engineering, and that's what I have
-              been doing from that moment forward. The goal of creating this
-              portfolio is to create a summary of my Software Engineering
+              end my preference was software engineering, and that is what I
+              have been doing from that moment forward. The goal of creating
+              this portfolio is to create a summary of my Software Engineering
               journey.
             </p>
           </div>
@@ -73,10 +73,6 @@ export default function Home() {
                 width={1000}
                 height={1000}
               />
-              {/* <img
-                src="./assets/S1/eurodollarconverter.png"
-                alt="euro to dollar converter screenshot"
-              ></img> */}
             </div>
             <div className="1">
               <h3 className="font-semibold font-sans text-xl">
@@ -87,14 +83,18 @@ export default function Home() {
                 project of my first semester. It is a shopping system that has a
                 shopping cart and check out simulation.
               </p>
-              <img
-                src="./assets/S1/winkel2.png"
+              <Image
+                src="/assets/S1/winkel2.png"
                 alt="windows forms shopping app"
-              ></img>
-              <img
-                src="./assets/S1/betalen.png"
+                width={1000}
+                height={1000}
+              />
+              <Image
+                src="/assets/S1/betalen.png"
                 alt="paying screen in windows forms shopping app"
-              ></img>
+                width={1000}
+                height={1000}
+              />
             </div>
             <div className="2">
               <h3 className="font-semibold font-sans text-xl">StudyCluster</h3>
@@ -105,12 +105,24 @@ export default function Home() {
                 class diagram for our .NET OOP application. This assignment also
                 was the first time that I worked with a database.
               </p>
-              <img src="./assets/S1/classdiagram.png" alt="class diagram"></img>
-              <img
-                src="./assets/S1/eloscheduleitemform.png"
+              <Image
+                src="/assets/S1/classdiagram.png"
+                alt="class diagram"
+                width={1000}
+                height={1000}
+              />
+              <Image
+                src="/assets/S1/eloscheduleitemform.png"
                 alt="ELO schedule"
-              ></img>
-              <img src="./assets/S1/elohomepage.png" alt="ELO homepage"></img>
+                width={1000}
+                height={1000}
+              />
+              <Image
+                src="/assets/S1/elohomepage.png"
+                alt="ELO homepage"
+                width={1000}
+                height={1000}
+              />
             </div>
             <div className="2">
               <h3 className="font-semibold font-sans text-xl">Circustrain</h3>
@@ -120,10 +132,12 @@ export default function Home() {
                 braking any of the given rules. My application designing skills
                 improved a lot because of this exercise.
               </p>
-              <img
-                src="./assets/S2/circustreinflowchart.png"
+              <Image
+                src="/assets/S2/circustreinflowchart.png"
                 alt="flowchart"
-              ></img>
+                width={1000}
+                height={1000}
+              />
             </div>
             <div className="3">
               <h3 className="font-semibold font-sans text-xl">Dream Journal</h3>
@@ -132,10 +146,12 @@ export default function Home() {
                 multi-layered applications. I made an app that can be used to
                 keep track of your dreams and see your friends dreams.
               </p>
-              <img
-                src="./assets/S2/dreamyournaluidesign.png"
+              <Image
+                src="/assets/S2/dreamyournaluidesign.png"
                 alt="dream yournal app design"
-              ></img>
+                width={1000}
+                height={1000}
+              />
             </div>
             <div className="3">
               <h3 className="font-semibold font-sans text-xl">
@@ -148,7 +164,12 @@ export default function Home() {
                 through express. During this project I also learned how to write
                 unit tests.
               </p>
-              <img src="./assets/S2/jest.png" alt="jest tests"></img>
+              <Image
+                src="/assets/S2/jest.png"
+                alt="jest tests"
+                width={1000}
+                height={1000}
+              />
             </div>
             <div className="4">
               <h3 className="font-semibold font-sans text-xl">Ninja Game</h3>
@@ -165,7 +186,12 @@ export default function Home() {
                 where automatically run after pushing changes to my Github
                 repository because of the CI/CD pipeline.
               </p>
-              <img src="./assets/S3/CICD.png" alt="github actions CI/CD"></img>
+              <Image
+                src="/assets/S3/CICD.png"
+                alt="github actions CI/CD"
+                width={1000}
+                height={1000}
+              />
             </div>
           </div>
         </div>
