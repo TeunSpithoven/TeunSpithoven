@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import teunspithoventransparent from "../public/assets/portret/teun_spithoven_transparent_rotated_and_cropped.png";
+import teunspithoven from "../public/assets/portret/teun_spithoven_transparent_rotated_and_cropped.png";
 import Link from "next/link";
 
 export default function Home() {
@@ -53,8 +53,8 @@ export default function Home() {
         </div>
         <div className={"md:w-1/2"}>
           <Image
-            className="rounded-full border-4 border-white"
-            src={teunspithoventransparent}
+            className="rounded-full border-4 border-white bg-slate-400"
+            src={teunspithoven}
             alt={"portret photo of Teun Spithoven with transparent background"}
             width={500}
             height={500}
