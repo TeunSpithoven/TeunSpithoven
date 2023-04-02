@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import Spline from "@splinetool/react-spline";
+import teunspithoventransparent from "../public/assets/portret/teun_spithoven_transparent_rotated_and_cropped.png";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -22,7 +23,46 @@ export default function Home() {
         <meta content="#43B581" data-react-helmet="true" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="absolute w-full h-96">
+
+      <div
+        className={
+          "flex flex-col md:flex-row items-center justify-between gap-10 absolute w-full h-screen px-4 md:px-10 py-20"
+        }
+      >
+        <div className={"justify-center w-1/2 md:pt-0"}>
+          <div
+            className={"flex flex-col gap-2 items-center font-bold text-6xl"}
+          >
+            <Link
+              href={"/projects"}
+              className={
+                "transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0"
+              }
+            >
+              Projects
+            </Link>
+            <Link
+              href={"/info"}
+              className={
+                "transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0"
+              }
+            >
+              Contact
+            </Link>
+          </div>
+        </div>
+        <div className={"md:w-1/2"}>
+          <Image
+            className="rounded-full border-4 border-white"
+            src={teunspithoventransparent}
+            alt={"portret photo of Teun Spithoven with transparent background"}
+            width={500}
+            height={500}
+          />
+        </div>
+      </div>
+
+      {/* <div className="absolute w-full h-96">
         <Spline scene="https://prod.spline.design/wFgGuz25sEF624km/scene.splinecode" />
       </div>
       <div className="absolute mt-96">
@@ -245,7 +285,7 @@ export default function Home() {
             </a>
           </footer>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
