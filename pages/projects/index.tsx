@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default function ProjectsPage() {
   return (
-    <div className="flex flex-row justify-center gap-10">
+    <div className="flex flex-col md:flex-row justify-center gap-10 h-screen">
       <Link href={"/"} className="absolute left-20 top-20">
         🏠Home
       </Link>
-      <div className={"flex flex-col justify-center items-center h-screen"}>
+      <div className={"flex flex-col justify-center items-center"}>
         <h1>Semester 1</h1>
         <div className={"flex flex-col gap-2 items-center font-bold text-4xl"}>
           <Link
@@ -19,7 +19,7 @@ export default function ProjectsPage() {
           </Link>
         </div>
       </div>
-      <div className={"flex flex-col justify-center items-center h-screen"}>
+      <div className={"flex flex-col justify-center items-center"}>
         <h1>Semester 2</h1>
         <div className={"flex flex-col gap-2 items-center font-bold text-4xl"}>
           <Link

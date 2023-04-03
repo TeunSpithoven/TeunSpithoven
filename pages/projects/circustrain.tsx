@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function CircusTrain() {
   return (
-    <div className="h-screen px-4 md:px-20 lg:px-40">
-      <Link href={"/projects"} className="absolute left-20 top-20">
+    <div className="h-screen px-4 md:px-20 lg:px-40 pt-10 md:pt-0">
+      <Link href={"/projects"} className="absolute left-5 md:left-20 top-5 md:top-20">
         👈Projects
       </Link>
       <div
@@ -21,7 +21,7 @@ export default function CircusTrain() {
         </p>
         <Image
           src="/assets/S2/circustreinflowchart.png"
-          alt="flowchart"
+          alt="circus train flowchart"
           width={500}
           height={500}
         />
