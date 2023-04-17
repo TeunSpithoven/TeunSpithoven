@@ -24,6 +24,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <div>Heuj! Ik ben Teun, Software engineering student. Welkom op mijn portfolio.</div>
+
       <div
         className={
           "flex flex-col md:flex-row items-center justify-between gap-10 absolute w-full h-screen px-4 md:px-10 py-20"
