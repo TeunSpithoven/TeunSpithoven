@@ -1,11 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Project(
-  title: string,
-  description: string,
-  imageUrl: string
-) {
+export default function Project({
+  title,
+  description,
+  image,
+}: {
+  title: string;
+  description: string;
+  image: string;
+}) {
   return (
     <div className="h-screen px-4 md:px-20 lg:px-40 pt-10 md:pt-0">
       <Link
@@ -22,7 +26,7 @@ export default function Project(
         <h3 className="font-semibold font-sans text-3xl">{title}</h3>
         <p className={"text-xl"}>{description}</p>
         <Image
-          src={imageUrl}
+          src={image}
           alt="circus train flowchart"
           width={500}
           height={500}

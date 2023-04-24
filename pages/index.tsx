@@ -24,17 +24,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>Heuj! Ik ben Teun, Software engineering student. Welkom op mijn portfolio.</div>
-
       <div
         className={
           "flex flex-col md:flex-row items-center justify-between gap-10 absolute w-full h-screen px-4 md:px-10 py-20"
         }
       >
+        {/* The top/left side of the screen */}
         <div className={"justify-center w-1/2 md:pt-0"}>
           <div
             className={"flex flex-col gap-2 items-center font-bold text-6xl"}
           >
+            <div className={"mb-24 text-2xl break-after-word"}>
+              Heuj! Ik ben Teun, Software engineering student. Welkom op mijn
+              portfolio.
+            </div>
+            {/* Links */}
             <Link
               href={"/projects"}
               className={
@@ -53,6 +57,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        {/* The right/bottom side of the screen. */}
         <div className={"md:w-1/2"}>
           <Image
             className="rounded-full border-4 border-white bg-slate-400"

@@ -17,6 +17,14 @@ export default function ProjectsPage() {
           >
             Euro-Dollar converter
           </Link>
+          <Link
+            href={"/projects/shop-register-system"}
+            className={
+              "transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0"
+            }
+          >
+            Shop Register System
+          </Link>
         </div>
       </div>
       <div className={"flex flex-col justify-center items-center"}>
