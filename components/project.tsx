@@ -20,17 +20,19 @@ export default function Project({
       </Link>
       <div
         className={
-          "flex flex-col gap-4 items-center justify-start pt-4 md:pt-0 md:justify-center h-full font-bold text-6xl"
+          "flex flex-col gap-4 items-center justify-start pt-4 md:px-20 lg:px-30 xl:px-40 md:pt-0 md:justify-center h-full font-bold text-6xl"
         }
       >
         <h3 className="font-semibold font-sans text-3xl">{title}</h3>
         <p className={"text-xl"}>{description}</p>
-        <Image
-          src={image}
-          alt="circus train flowchart"
-          width={500}
-          height={500}
-        />
+        {image && (
+          <Image
+            src={image}
+            alt="project image"
+            width={500}
+            height={500}
+          />
+        )}
       </div>
     </div>
   );
