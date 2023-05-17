@@ -1,17 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
-import teunspithoven from "../public/assets/portret/teun_spithoven_transparent_rotated_and_cropped.png";
-import Link from "next/link";
+import teunspithoven from "@/public/assets/portret/teun_spithoven_transparent-half.webp";
 import ProjectLink from "@/components/projectLink";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Teun Spithoven</title>
-        <meta name="description" content="Teun's portfolio" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta content="Teun Spithoven" property="og:title" />
         <meta
           content="Portfolio van mijn ICT avonturen tot nu toe"
           property="og:description"
@@ -68,7 +63,7 @@ export default function Home() {
           }
         >
           <Image
-            className="rounded-full border-4 border-white bg-slate-400"
+            className="rounded-full border-4 border-black dark:border-white bg-slate-400"
             src={teunspithoven}
             alt={"portret photo of Teun Spithoven with transparent background"}
             width={500}
