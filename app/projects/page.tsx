@@ -1,10 +1,8 @@
-import Link from "next/link";
 import ProjectColumn from "@/components/projectColumn";
 import ProjectLink from "@/components/projectLink";
-import Head from "next/head";
 import NavButton from "@/components/navButton";
 
-export default function ProjectsPage() {
+export default function NewProjectsPage() {
   return (
     <>
       <div className="flex flex-col lg:flex-row justify-center gap-10 h-screen">
