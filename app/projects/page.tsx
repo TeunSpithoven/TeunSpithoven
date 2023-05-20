@@ -6,7 +6,7 @@ export default function NewProjectsPage() {
   return (
     <>
       <div className="flex justify-center items-center h-screen">
-        <div className="flex flex-col lg:flex-row items-start gap-10">
+        <div className="flex flex-col lg:flex-row lg:items-start items-center gap-10">
           <NavButton text="🏠Home" href="/" />
           <ProjectColumn title="Semester 1">
             <ProjectLink
