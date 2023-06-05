@@ -1,4 +1,9 @@
-export default function ProjectColumn(props: any) {
+interface Props {
+  title: string;
+  children: any;
+}
+
+export default function ProjectColumn(props: Props) {
   return (
     <div className={"flex flex-col justify-center items-center"}>
       <h1>{props.title}</h1>
