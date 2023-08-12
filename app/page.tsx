@@ -50,7 +50,7 @@ export default function Home() {
           >
             <div
               data-testid="introduction"
-              className={"mb-4 md:mb-24 text-2xl"}
+              className={"font-mono mb-4 md:mb-24 text-2xl"}
             >
               <p>Hello! I am Teun. Software Engineer.</p>
               <p>Welcome to my portfolio.</p>

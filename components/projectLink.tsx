@@ -11,7 +11,7 @@ export default function ProjectLink({
     <Link
       href={href}
       className={
-        "transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0"
+        "font-mono subpixel-antialiased transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0 bg-white text-black border border-black rounded-md px-4 py-3"
       }
     >
       {name}
