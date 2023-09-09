@@ -1,6 +1,6 @@
 import NavButton from "@/components/navButton";
 
-export default function Loading() {
+export default function ProjectLoading() {
   return (
     <div className="h-screen px-4 md:px-20 lg:px-40 pt-10 md:pt-0">
       <NavButton text="👈Projects" href="/projects" />
