@@ -28,10 +28,10 @@ export const projects = [
   {
     id: "circustrain",
     title: "Circus Train",
-    description: `In semester 2 of the study, i wrote a program that sorts circus
+    description: `A C# .NET application that sorts circus
       animals into train wagons in the most efficient way, without braking
       any of the given rules. My application designing skills improved a lot
-      because of this exercise.`,
+      because of this exercise. For this project I also wrote unit- and integration tests.`,
     images: ["/assets/S2/circustrein-screenshot.png", "/assets/S2/circustreinflowchart.png", "/assets/S2/circustrein-solution.png"],
   },
   {
