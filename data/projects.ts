@@ -32,7 +32,7 @@ export const projects = [
       animals into train wagons in the most efficient way, without braking
       any of the given rules. My application designing skills improved a lot
       because of this exercise.`,
-    images: ["/assets/S2/circustreinflowchart.png"],
+    images: ["/assets/S2/circustrein-screenshot.png", "/assets/S2/circustreinflowchart.png", "/assets/S2/circustrein-solution.png"],
   },
   {
     id: "bolus-calculator",
