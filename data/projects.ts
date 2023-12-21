@@ -1,12 +1,12 @@
 export const projects = [
-  {
-    id: "eurodollarconverter",
-    title: "Euro Dollar Converter",
-    description: `In my first semester I learned my first programming language: C#. 
-      During this semester I learned about programming by making practical assignments, 
-      by making an application that converts euros to dollars.`,
-    images: ["/assets/S1/eurodollarconverter.png"],
-  },
+  // {
+  //   id: "eurodollarconverter",
+  //   title: "Euro Dollar Converter",
+  //   description: `In my first semester I learned my first programming language: C#. 
+  //     During this semester I learned about programming by making practical assignments, 
+  //     by making an application that converts euros to dollars.`,
+  //   images: ["/assets/S1/eurodollarconverter.png"],
+  // },
   {
     id: "shop-register-system",
     title: "Shop Register System",
