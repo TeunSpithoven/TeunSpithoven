@@ -25,15 +25,15 @@ export const projects = [
   was the first time that I worked with a database.`,
     images: ["/assets/S1/eloscheduleitemform.png", "/assets/S1/classdiagram.png"],
   },
-  {
-    id: "circustrain",
-    title: "Circus Train",
-    description: `A C# .NET application that sorts circus
-      animals into train wagons in the most efficient way, without braking
-      any of the given rules. My application designing skills improved a lot
-      because of this exercise. For this project I also wrote unit- and integration tests.`,
-    images: ["/assets/S2/circustrein-screenshot.png", "/assets/S2/circustreinflowchart.png", "/assets/S2/circustrein-solution.png"],
-  },
+  // {
+  //   id: "circustrain",
+  //   title: "Circus Train",
+  //   description: `A C# .NET application that sorts circus
+  //     animals into train wagons in the most efficient way, without braking
+  //     any of the given rules. My application designing skills improved a lot
+  //     because of this exercise. For this project I also wrote unit- and integration tests.`,
+  //   images: ["/assets/S2/circustrein-screenshot.png", "/assets/S2/circustreinflowchart.png", "/assets/S2/circustrein-solution.png"],
+  // },
   {
     id: "bolus-calculator",
     title: "Bolus Calculator",
