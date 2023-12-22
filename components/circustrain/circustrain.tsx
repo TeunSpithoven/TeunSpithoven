@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Animal, Wagon, Train, Conducteur } from "@/logic/models/Conductor";
+import { Conducteur } from "@/logic/models/Conductor";
+import { Animal } from "@/logic/models/Animal";
+import { Wagon } from "@/logic/models/Wagon";
+import { Train } from "@/logic/models/Train";
 
 export default function Circustrain() {
   const _conducteur = new Conducteur();
