@@ -23,7 +23,7 @@ export class Conducteur {
       while (beestDatInWagonMag !== undefined) {
         // Stop beest in wagon
         wagon.animals.push(beestDatInWagonMag);
-        // Registreer de punten van het beest in de wagon.
+        wagon.points += beestDatInWagonMag.points;
 
         // Verwijder beest uit initialAnimals
         const index = initialAnimals.indexOf(beestDatInWagonMag);
