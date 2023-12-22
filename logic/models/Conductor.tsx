@@ -49,7 +49,7 @@ export class Conducteur {
       animals.find((x) => x.type === "carnivore") &&
       wagon.animals.length === 0
     ) {
-      const returnAnimal = this.FindBiggestCarnivore(animals);
+      const returnAnimal = this.findBiggestCarnivore(animals);
       return returnAnimal;
     }
 
@@ -59,13 +59,13 @@ export class Conducteur {
       const fittingAnimals: Animal[] = animals.filter(
         (animal) =>
           !(animal.type === "carnivore") &&
-          !this.AnimalGetsEaten(wagon, animal) &&
-          this.AnimalFits(wagon, animal)
+          !this.animalGetsEaten(wagon, animal) &&
+          this.animalFits(wagon, animal)
       );
       // No animal(s) found: return null / Animal(s) found: return first animal in list.
       if (fittingAnimals.length <= 0) return undefined;
       const returnAnimal: Animal | undefined =
-        this.FindBiggestHerbivore(fittingAnimals);
+        this.findBiggestHerbivore(fittingAnimals);
       // AddAnimal(returnAnimal);
       return returnAnimal;
     }
@@ -74,24 +74,27 @@ export class Conducteur {
     const fittingHerbivores: Animal[] = animals.filter(
       (animal) =>
         !(animal.type === "carnivore") &&
-        this.AnimalFits(wagon, animal) &&
-        !this.AnimalGetsEaten(wagon, animal)
+        this.animalFits(wagon, animal) &&
+        !this.animalGetsEaten(wagon, animal)
     );
 
     if (fittingHerbivores.length <= 0) return undefined;
-    const biggestHerbivoreFirst: Animal[] = fittingHerbivores.toSorted(
-      (x) => x.points
-    );
+    // const biggestHerbivoreFirst: Animal[] = fittingHerbivores.toSorted(
+    //   (x) => x.points
+    // );
+    const biggestHerbivoreFirst: Animal[] = fittingHerbivores.sort(function (first, second) {
+      return second.points - first.points;
+    });
     const returnAnimal: Animal = biggestHerbivoreFirst[0];
     // AddAnimal(returnAnimal);
     return returnAnimal;
   }
 
-  AnimalFits(wagon: Wagon, animal: Animal) {
+  animalFits(wagon: Wagon, animal: Animal) {
     return wagon.points + animal.points <= 10;
   }
 
-  AnimalGetsEaten(wagon: Wagon, animal: Animal) {
+  animalGetsEaten(wagon: Wagon, animal: Animal) {
     const wagonCarnivores: Animal[] = wagon.animals.filter(
       (animal) => animal.type === "carnivore"
     );
@@ -103,29 +106,35 @@ export class Conducteur {
     );
   }
 
-  FindBiggestCarnivore(animals: Animal[]): Animal | undefined {
+  findBiggestCarnivore(animals: Animal[]): Animal | undefined {
     const carnivoresInList: Animal[] = animals.filter(
       (animal) => animal.type === "carnivore"
     );
 
     if (carnivoresInList.length <= 0) return undefined;
 
-    const biggestCarnivoreFirst: Animal[] = carnivoresInList.toSorted(
-      (animal) => animal.points
-    );
+    // const biggestCarnivoreFirst: Animal[] = carnivoresInList.toSorted(
+    //   (animal) => animal.points
+    // );
+    const biggestCarnivoreFirst: Animal[] = carnivoresInList.sort(function (first, second) {
+      return second.points - first.points;
+    });
     return biggestCarnivoreFirst[0];
   }
 
-  FindBiggestHerbivore(animals: Animal[]): Animal | undefined {
+  findBiggestHerbivore(animals: Animal[]): Animal | undefined {
     const herbivoresInList: Animal[] = animals.filter(
       (animal) => animal.type === "herbivore"
     );
 
     if (herbivoresInList.length <= 0) return undefined;
 
-    const biggestHerbivoreFirst: Animal[] = herbivoresInList.toSorted(
-      (animal) => animal.points
-    );
+    // const biggestHerbivoreFirst: Animal[] = herbivoresInList.toSorted(
+    //   (animal) => animal.points
+    // );
+    const biggestHerbivoreFirst: Animal[] = herbivoresInList.sort(function (first, second) {
+      return second.points - first.points;
+    });
     return biggestHerbivoreFirst[0];
   }
 }
