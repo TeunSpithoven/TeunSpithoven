@@ -61,7 +61,7 @@ export default function Circustrain() {
   }
 
   return (
-    <div className="flex flex-col text-base bg-gray-400/70 p-4 w-full gap-4 font-normal">
+    <div className="flex flex-col text-base bg-gray-400/70 p-4 w-3/4 gap-4 font-normal dark:text-black">
       {typeError ? (
         <div className="text-center bg-red-500 rounded-lg p-2">{typeError}</div>
       ) : null}
@@ -149,7 +149,7 @@ export default function Circustrain() {
 
       {/* Lists */}
       <div className="flex flex-col gap-2 justify-between sm:flex-row h-96">
-        <div className="bg-white w-full px-1">
+        <div className="bg-white w-full px-1 h-full">
           {animals.length > 0 ? (
             <ul className="overflow-auto max-h-full">
               {animals.map((animal: Animal) => (
@@ -164,7 +164,7 @@ export default function Circustrain() {
             </ul>
           )}
         </div>
-        <div className="bg-white w-full px-1">
+        <div className="bg-white w-full px-1 h-full">
           {train.wagons.length > 0 ? (
             <ul className="overflow-auto max-h-full text-center">
               <li className="text-left pl-24">
