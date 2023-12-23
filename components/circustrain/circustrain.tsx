@@ -61,7 +61,7 @@ export default function Circustrain() {
   }
 
   return (
-    <div className="flex flex-col text-base bg-gray-400/70 p-4 w-3/4 gap-4 font-normal dark:text-black">
+    <div className="flex flex-col text-base bg-gray-400/70 p-4 w-full xl:w-3/4 h-fit gap-4 font-normal dark:text-black">
       {typeError ? (
         <div className="text-center bg-red-500 rounded-lg p-2">{typeError}</div>
       ) : null}
