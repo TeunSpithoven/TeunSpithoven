@@ -1,4 +1,5 @@
 import NavButton from "@/components/navButton";
+import Link from 'next/link';
 
 export default function S6IndividualProject() {
   return (
@@ -9,6 +10,7 @@ export default function S6IndividualProject() {
           S6 individual project
         </h3>
         <p className="text-xl">to be filled</p>
+        <Link href="https://boerenboodschap.teunspithoven.nl" className="underline">Go to project.</Link>
       </div>
     </div>
   );
