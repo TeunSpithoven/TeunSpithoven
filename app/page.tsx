@@ -3,13 +3,12 @@ import Image from "next/image";
 import teunspithoven from "@/public/assets/portret/teun_spithoven_transparent-half.webp";
 import ProjectLink from "@/components/projectLink";
 import Link from "next/link";
-import UxsniffScript from "@/components/UxsniffScript";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <UxsniffScript />
+        <script async src="https://api.uxsniff.com/cdn/js/uxsnf_track.js" />
         <meta
           content="Portfolio van mijn ICT avonturen tot nu toe"
           property="og:description"
@@ -40,6 +39,8 @@ export default function Home() {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
+
+      <script async src="https://api.uxsniff.com/cdn/js/uxsnf_track.js" />
 
       <div
         className={
@@ -72,7 +73,12 @@ export default function Home() {
             "flex order-first md:order-last w-1/4 md:w-1/2 justify-center items-center"
           }
         >
-          <Link href="https://github.com/TeunSpithoven" className="p-1 md:p-4 md:mb-48 xl:mb-52 absolute rounded-full text-transparent">link</Link>
+          <Link
+            href="https://github.com/TeunSpithoven"
+            className="p-1 md:p-4 md:mb-48 xl:mb-52 absolute rounded-full text-transparent"
+          >
+            link
+          </Link>
           <Image
             className="rounded-full border-4 border-black dark:border-white bg-slate-400"
             src={teunspithoven}
