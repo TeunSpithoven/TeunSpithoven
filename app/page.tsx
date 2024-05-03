@@ -3,11 +3,13 @@ import Image from "next/image";
 import teunspithoven from "@/public/assets/portret/teun_spithoven_transparent-half.webp";
 import ProjectLink from "@/components/projectLink";
 import Link from "next/link";
+import UxsniffScript from "@/components/UxsniffScript";
 
 export default function Home() {
   return (
     <>
       <Head>
+        <UxsniffScript />
         <meta
           content="Portfolio van mijn ICT avonturen tot nu toe"
           property="og:description"
