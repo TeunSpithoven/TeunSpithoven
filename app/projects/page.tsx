@@ -43,9 +43,9 @@ export default function ProjectList() {
             <ProjectLink name="Pro6pp Admin CMS" href="/projects/pro6pp" />
           </ProjectColumn> */}
             <ProjectColumn title="Semester 6">
-              <ProjectLink name="Group Project" href="/projects/s6-group" />
+              <ProjectLink name="Appsemble" href="/projects/s6-group" />
               <ProjectLink
-                name="Individual Project"
+                name="Boerenboodschap"
                 href="/projects/s6-individual"
               />
             </ProjectColumn>

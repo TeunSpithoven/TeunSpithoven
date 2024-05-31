@@ -1,12 +1,4 @@
 export const projects = [
-  // {
-  //   id: "eurodollarconverter",
-  //   title: "Euro Dollar Converter",
-  //   description: `In my first semester I learned my first programming language: C#. 
-  //     During this semester I learned about programming by making practical assignments, 
-  //     by making an application that converts euros to dollars.`,
-  //   images: ["/assets/S1/eurodollarconverter.png"],
-  // },
   {
     id: "shop-register-system",
     title: "Shop Register System",
@@ -23,17 +15,11 @@ export const projects = [
   schools with 5 other classmates. In this assignment we made a
   class diagram for our .NET OOP application. This assignment also
   was the first time that I worked with a database.`,
-    images: ["/assets/S1/eloscheduleitemform.png", "/assets/S1/classdiagram.png"],
+    images: [
+      "/assets/S1/eloscheduleitemform.png",
+      "/assets/S1/classdiagram.png",
+    ],
   },
-  // {
-  //   id: "circustrain",
-  //   title: "Circus Train",
-  //   description: `A C# .NET application that sorts circus
-  //     animals into train wagons in the most efficient way, without braking
-  //     any of the given rules. My application designing skills improved a lot
-  //     because of this exercise. For this project I also wrote unit- and integration tests.`,
-  //   images: ["/assets/S2/circustrein-screenshot.png", "/assets/S2/circustreinflowchart.png", "/assets/S2/circustrein-solution.png"],
-  // },
   {
     id: "bolus-calculator",
     title: "Bolus Calculator",
@@ -74,6 +60,30 @@ export const projects = [
     description: `This was my first project in colaboration with Austrian students. 
       We made a software project planning application. 
       With bimpi you could do anything from brainstorming to specifying requirements.`,
+    images: [],
+  },
+  {
+    id: "s6-group",
+    title: "Appsemble",
+    description: `Beschrijving`,
+    images: [],
+  },
+  {
+    id: "s6-individual",
+    title: "Boerenboodschap",
+    description: `https://boerenboodschap.teunspithoven.nl`,
+    images: [],
+  },
+  {
+    id: "s7-group",
+    title: "Sound Source Localisation",
+    description: `Beschrijving`,
+    images: [],
+  },
+  {
+    id: "s7-individual",
+    title: "Racket Spanning Meter",
+    description: `Beschrijving`,
     images: [],
   },
 ];
