@@ -41,17 +41,19 @@ export const projects = [
   {
     id: "ninja-game",
     title: "Ninja Game",
-    description: `In my third semester I made a web application with Python,
-  Django, Node and VueJs. For this distributed web app I made one
-  frontend application with Vuejs and two different Django
-  backends. One for handling user authentication and the saving of
-  used data, and the other one as my game server. This game server
-  uses a websocket for fast back and forth communication between
-  client and server. My software testing skills improved a lot
-  during this project, I wrote unit, integration and end to end
-  tests. I used Cypress to test my frontend. All of these tests
-  where automatically run after pushing changes to my Github
-  repository because of the CI/CD pipeline.`,
+    description: `
+      In my third semester I made a web application with Python,
+      Django, Node and VueJs. For this distributed web app I made one
+      frontend application with Vuejs and two different Django
+      backends. One for handling user authentication and the saving of
+      used data, and the other one as my game server. This game server
+      uses a websocket for fast back and forth communication between
+      client and server. My software testing skills improved a lot
+      during this project, I wrote unit, integration and end to end
+      tests. I used Cypress to test my frontend. All of these tests
+      where automatically run after pushing changes to my Github
+      repository because of the CI/CD pipeline.
+    `,
     images: ["/assets/S3/CICD.png"],
   },
   {
@@ -59,7 +61,7 @@ export const projects = [
     title: "Bimpi",
     description: `This was my first project in colaboration with Austrian students. 
       We made a software project planning application. 
-      With bimpi you could do anything from brainstorming to specifying requirements.`,
+      With bimpi you could do anything from brainstorming to specifying requirements for software applications.`,
     images: [],
   },
   {
@@ -71,19 +73,44 @@ export const projects = [
   {
     id: "s6-individual",
     title: "Boerenboodschap",
-    description: `https://boerenboodschap.teunspithoven.nl`,
+    description: `
+      https://boerenboodschap.teunspithoven.nl
+      Semester 6 draaide voornamelijk om non functional requirements.
+      We zijn aan de slag gegaan met het ontwerpen en implementeren van enterprise software systemen die schaalbaar zijn
+       en daardoor veel meer gebruikers tegelijk van service kan voorzien dan een applicatie die niet schaalbaar is.
+      Dit heb ik gedaan door met docker, kubernetes en helm te werken en heb ik uiteindelijk mijn microservices automatisch laten schalen
+       op Azure kubernetes service.
+      Ook heb ik mijn handen vies gemaakt aan infrastructure as code met Pulumi.
+    `,
     images: [],
   },
   {
     id: "s7-group",
     title: "Sound Source Localisation",
-    description: `Beschrijving`,
+    description: `
+      In semester 7 heb ik de minor signals and embedded systems gevolgd. 
+      Hier hebben we met vier man het sound source localization project overgenomen van een vorige groep. 
+      Blijkbaar heeft de vorige groep een demo gegeven waarin het systeem werkte, 
+      we waren daar verbaasd over nadat we zelf het project probeerden op te starten. 
+      Na een hele tijd de spaghetti code van de vorige groep te ontcijferen hebben we heel wat onlogische ontwerpkeuzes gevonden. 
+      Op basis hiervan hebben we een nieuw ontwerp gemaakt (C1 en C2 model) en zijn we begonnen met de implementatie. 
+      Ik was verantwoordelijk voor het server deel van de applicatie, 
+      de rest van de groep hield zich bezig met de hardware (die een brandgevaar was), 
+      de code voor het berekenen van de hoek van een geluidsbron en de code voor het berekenen van 
+      snijpunten van hoeken om zo de locatie van de geluidsbron te achterhalen.
+    `,
     images: [],
   },
   {
     id: "s7-individual",
     title: "Racket Spanning Meter",
-    description: `Beschrijving`,
+    description: `
+      Tijdens de minor Signals and Embedded systems ben ik na brainstormen met klasgenoten en docenten aan de slag
+       gegaan met een applicatie om de spanning van de snaren van een tennisracket te achterhalen.
+      Eerst heb ik een onderzoek uitgevoerd en daarna ben ik in Javascript aan de slag gegaan.
+      Tot nu toe is er een applicatie die microfoon input met FFT omzet naar een mooi staafdiagram.
+      Nu moet ik nog de logica toevoegen om de frequentie van een tennisracket te isoleren zodat ik die terug kan geven aan de gebruiker.
+    `,
     images: [],
   },
 ];
