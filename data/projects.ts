@@ -67,7 +67,14 @@ export const projects = [
   {
     id: "s6-group",
     title: "Appsemble",
-    description: `Beschrijving`,
+    description: `Voor Appsemble hebben we als projectgroep de opdracht gekregen om appsemble als enterprise systeem te upgraden.
+      We hebben gewerkt aan Kubernetes, Security en Migratie naar een nieuw cloud hosting platform.
+      Ik was verantwoordelijk voor Security, daarvoor heb ik in de GitLab omgeving security policies geconfigureerd, die
+        policies voeren automatisch verschillende scans uit. Zo hoef je dus niet per repository in de pipeline security scans
+        in te stellen omdat het in het overkoepelende project is geconfigureerd.
+      Daarnaast heb ik ook met een aantal tools de appsemble applicatie gescanned op kwetsbaarheden. Daar heb ik vervolgens issues
+        voor gemaakt en ben ik aan de slag gegaan om ze op te lossen.
+    `,
     images: [],
   },
   {
