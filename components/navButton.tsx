@@ -10,9 +10,9 @@ export default function dNavButton({
   return (
     <Link
       href={href}
-      className="absolute left-5 md:left-20 top-5 md:top-20 border-2 border-black dark:border-white dark:bg-black bg-white text-black dark:text-white rounded-full px-2 z-50"
+      className="absolute w-12 h-12 right-5 bottom-5 border-2 border-black dark:border-white dark:bg-white bg-black text-black dark:text-white rounded-full z-50"
     >
-      {text}
+      <span className="flex items-center justify-center w-full h-full rounded-full">{text}</span>
     </Link>
   );
 }

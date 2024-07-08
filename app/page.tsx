@@ -8,7 +8,6 @@ export default function Home() {
   return (
     <>
       <Head>
-        <script async src="https://api.uxsniff.com/cdn/js/uxsnf_track.js" />
         <meta
           content="Portfolio van mijn ICT avonturen tot nu toe"
           property="og:description"

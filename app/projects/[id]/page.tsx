@@ -15,8 +15,8 @@ export default function ProjectPage({ params }: { params: Params }) {
   const { title, description, images } = project;
 
   return (
-    <div className="flex h-screen w-screen px-4 md:px-20 lg:px-40 pt-10 md:pt-0">
-      <NavButton text="👈Projects" href="/projects" />
+    <div className="flex h-screen w-screen px-4 md:px-20 lg:px-40">
+      <NavButton text="👈" href="/projects" />
       <div className="flex w-full flex-col gap-4 items-center justify-start pt-4 md:px-20 lg:px-30 xl:px-40 md:pt-0 md:mt-36 h-fit font-bold text-6xl">
         <h3 className="font-semibold font-sans text-2xl">{title}</h3>
         <p className="font-normal text-base">{description}</p>
@@ -27,7 +27,7 @@ export default function ProjectPage({ params }: { params: Params }) {
                 className="object-contain text-md"
                 key={image}
                 src={image}
-                alt="project image"
+                alt={title + " project image"}
                 width={500}
                 height={1000}
               />
