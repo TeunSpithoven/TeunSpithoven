@@ -1,3 +1,11 @@
+export type Project = {
+  id: string;
+  title: string;
+  description: string;
+  images: string[];
+  iFrameUrl?: string;
+};
+
 export const projects = [
   {
     id: "shop-register-system",
@@ -119,5 +127,6 @@ export const projects = [
       Nu moet ik nog de logica toevoegen om de frequentie van een tennisracket te isoleren zodat ik die terug kan geven aan de gebruiker.
     `,
     images: [],
+    iFrameUrl: "https://teunspithoven.github.io/racketspanningsmeter/",
   },
 ];
