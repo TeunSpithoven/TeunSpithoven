@@ -89,7 +89,6 @@ export const projects = [
     id: "s6-individual",
     title: "Boerenboodschap",
     description: `
-      https://boerenboodschap.teunspithoven.nl
       Semester 6 draaide voornamelijk om non functional requirements.
       We zijn aan de slag gegaan met het ontwerpen en implementeren van enterprise software systemen die schaalbaar zijn
        en daardoor veel meer gebruikers tegelijk van service kan voorzien dan een applicatie die niet schaalbaar is.
@@ -98,6 +97,7 @@ export const projects = [
       Ook heb ik mijn handen vies gemaakt aan infrastructure as code met Pulumi.
     `,
     images: [],
+    iFrameUrl: "https://boerenboodschap.teunspithoven.nl",
   },
   {
     id: "s7-group",
