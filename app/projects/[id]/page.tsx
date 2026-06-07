@@ -27,6 +27,7 @@ export default function ProjectPage({ params }: { params: Params }) {
             className="w-full min-h-[500px] border rounded-xl"
             src={iFrameUrl}
             title={title + " embedded content"}
+            allow="microphone"
             allowFullScreen
           />
         )}
