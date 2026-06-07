@@ -1,46 +1,47 @@
-import Head from "next/head";
+import type { Metadata } from "next";
 import Image from "next/image";
 import teunspithoven from "@/public/assets/portret/teun_spithoven_transparent-half.webp";
 import ProjectLink from "@/components/projectLink";
 import Link from "next/link";
 
+export const metadata: Metadata = {
+  openGraph: {
+    description: "Portfolio van mijn ICT avonturen tot nu toe",
+    url: "https://teunspithoven.nl/",
+    images: [
+      {
+        url: "https://teunspithoven.nl/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fteun_spithoven_transparent_rotated_and_cropped.cf0d9bfa.png&w=1080&q=75",
+      },
+    ],
+  },
+  other: {
+    "theme-color": "#43B581",
+  },
+};
+
 export default function Home() {
   return (
     <>
-      <Head>
-        <script async src="https://api.uxsniff.com/cdn/js/uxsnf_track.js" />
-        <meta
-          content="Portfolio van mijn ICT avonturen tot nu toe"
-          property="og:description"
-        />
-        <meta content="https://teunspithoven.nl/" property="og:url" />
-        <meta
-          content="https://teunspithoven.nl/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fteun_spithoven_transparent_rotated_and_cropped.cf0d9bfa.png&w=1080&q=75"
-          property="og:image"
-        />
-        <meta content="#43B581" data-react-helmet="true" />
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-      </Head>
-
       <script async src="https://api.uxsniff.com/cdn/js/uxsnf_track.js" />
+      <link rel="icon" href="/favicon.ico" />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png"
+      />
+      <link rel="manifest" href="/site.webmanifest" />
 
       <div
         className={

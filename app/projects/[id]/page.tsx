@@ -1,18 +1,29 @@
 import { projects, type Project } from "@/data/projects";
 import NavButton from "@/components/navButton";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
 interface Params {
   id: string;
 }
 
-export default function ProjectPage({ params }: { params: Params }) {
-  console.log(params);
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    id: project.id,
+  }));
+}
+
+export default async function ProjectPage({
+  params,
+}: {
+  params: Promise<Params>;
+}) {
+  const { id } = await params;
   const project: Project | undefined = projects.find(
-    (project) => project.id === params.id,
+    (project) => project.id === id,
   );
 
-  if (!project) return <div>404 page not found</div>;
+  if (!project) notFound();
 
   const { title, description, images, iFrameUrl } = project;
 
