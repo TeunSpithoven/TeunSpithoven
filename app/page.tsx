@@ -3,6 +3,7 @@ import Image from "next/image";
 import teunspithoven from "@/public/assets/portret/teun_spithoven_transparent-half.webp";
 import ProjectLink from "@/components/projectLink";
 import Link from "next/link";
+import { ViewTransition } from "react";
 
 export const metadata: Metadata = {
   openGraph: {
@@ -61,11 +62,13 @@ export default function Home() {
               <p>Welcome to my portfolio.</p>
             </div>
             {/* Links */}
-            <ProjectLink
-              data-testid="projectsButton"
-              name="Projects"
-              href="/projects"
-            />
+            <ViewTransition name="projects">
+              <ProjectLink
+                data-testid="projectsButton"
+                name="Projects"
+                href="/projects"
+              />
+            </ViewTransition>
           </div>
         </div>
         {/* Image */}

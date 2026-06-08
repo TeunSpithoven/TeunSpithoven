@@ -1,6 +1,7 @@
 import Circustrain from "@/components/circustrain/circustrain";
 import NavButton from "@/components/navButton";
 import Image from "next/image";
+import { ViewTransition } from "react";
 
 export default function circustrain() {
   const images: Array<string> = [
@@ -11,12 +12,21 @@ export default function circustrain() {
 
   return (
     <div className="flex h-screen w-screen px-4 md:px-20 lg:px-40 pt-10 md:pt-0">
-      <NavButton text="👈Projects" href="/projects" />
+      <ViewTransition name="projects">
+        <h2 className="invisible 2xl:visible absolute font-mono text-black subpixel-antialiased text-9xl/[2] h-4 left-0 top-1/2 rotate-90">
+          Projects
+        </h2>
+      </ViewTransition>
+      <NavButton
+        classNames="visible 2xl:invisible"
+        text="👈Projects"
+        href="/projects"
+      />{" "}
       <div className="flex w-full flex-col gap-4 items-center justify-start pt-4 md:px-20 lg:px-30 xl:px-40 md:pt-0 md:mt-36 h-fit font-bold text-6xl">
         {/* Title and description of the project */}
-        <h3 className="font-semibold font-sans text-3xl">
-          Circus Train
-        </h3>
+        <ViewTransition name={`project-circustrain`}>
+          <h3 className="font-semibold font-sans text-2xl">Circus Train</h3>
+        </ViewTransition>
         <p className="text-xl">
           A C# .NET application that sorts circus animals into train wagons in
           the most efficient way, without braking any of the given rules. My
