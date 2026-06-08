@@ -1,15 +1,19 @@
 import EuroDollarConverter from "@/components/euroDollarConverter";
 import NavButton from "@/components/navButton";
 import Image from "next/image";
+import Link from "next/link";
 import { ViewTransition } from "react";
 
 export default function eurodollarconverter() {
   return (
     <div className="flex h-screen w-screen px-4 md:px-20 lg:px-40 pt-10 md:pt-0">
       <ViewTransition name="projects">
-        <h2 className="invisible 2xl:visible absolute font-mono text-black subpixel-antialiased text-9xl/[2] h-4 left-0 top-1/2 rotate-90">
+        <Link
+          href="/projects"
+          className="invisible 2xl:visible absolute font-mono text-black subpixel-antialiased text-9xl/[1.5] left-0 top-1/2 rotate-90 -translate-x-1/4 -translate-y-1/4 border border-black rounded-md px-4 py-3"
+        >
           Projects
-        </h2>
+        </Link>
       </ViewTransition>
       <NavButton
         classNames="visible 2xl:invisible"
