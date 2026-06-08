@@ -2,6 +2,7 @@ import { projects, type Project } from "@/data/projects";
 import NavButton from "@/components/navButton";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import ProjectLink from "@/components/projectLink";
 
 interface Params {
   id: string;
@@ -25,7 +26,7 @@ export default async function ProjectPage({
 
   if (!project) notFound();
 
-  const { title, description, images, iFrameUrl } = project;
+  const { title, description, images, iFrameUrl, websiteUrl } = project;
 
   return (
     <div className="flex h-screen w-screen px-4 md:px-20 lg:px-40 pt-10 md:pt-0">
@@ -40,6 +41,9 @@ export default async function ProjectPage({
             allow="microphone"
             allowFullScreen
           />
+        )}
+        {websiteUrl && (
+          <ProjectLink href={websiteUrl} name="Ga naar website →" />
         )}
         {images && (
           <div className="flex gap-4 flex-row items-start flex-wrap w-screen px-10 pb-10 justify-center">

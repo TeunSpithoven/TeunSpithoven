@@ -4,6 +4,7 @@ export type Project = {
   description: string;
   images: string[];
   iFrameUrl?: string;
+  websiteUrl?: string;
 };
 
 export const projects = [
@@ -71,6 +72,13 @@ export const projects = [
       We made a software project planning application. 
       With bimpi you could do anything from brainstorming to specifying requirements for software applications.`,
     images: [],
+  },
+  {
+    id: "lees-dit-niet",
+    title: "Lees Dit Niet",
+    description: `Open op eigen risico.`,
+    images: [],
+    websiteUrl: "https://teunspithoven.github.io/lees-dit-niet/",
   },
   {
     id: "s6-group",

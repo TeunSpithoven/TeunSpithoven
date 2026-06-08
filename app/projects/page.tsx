@@ -34,6 +34,10 @@ export default function ProjectList() {
             <ProjectColumn title="Semester 3">
               <ProjectLink name="Ninja Game" href="/projects/ninja-game" />
               <ProjectLink name="Bimpi" href="/projects/bimpi" />
+              <ProjectLink
+                name="Lees dit niet"
+                href="/projects/lees-dit-niet"
+              />
             </ProjectColumn>
             {/* <ProjectColumn title="Semester 4">
             <ProjectLink name="Cyber" href="/projects/cyber" />
