@@ -5,6 +5,14 @@ import { notFound } from "next/navigation";
 import ProjectLink from "@/components/projectLink";
 import { ViewTransition } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+const componentMap: Record<string, React.ComponentType> = {
+  EuroDollarConverter: dynamic(
+    () => import("@/components/euroDollarConverter"),
+  ),
+  Circustrain: dynamic(() => import("@/components/circustrain/circustrain")),
+};
 
 interface Params {
   id: string;
@@ -28,7 +36,10 @@ export default async function ProjectPage({
 
   if (!project) notFound();
 
-  const { title, description, images, iFrameUrl, websiteUrl } = project;
+  const { title, description, images, iFrameUrl, websiteUrl, componentName } =
+    project;
+
+  const CustomComponent = componentName ? componentMap[componentName] : null;
 
   return (
     <div className="flex h-screen w-screen px-4 md:px-20 lg:px-40 pt-10 md:pt-0">
@@ -50,6 +61,7 @@ export default async function ProjectPage({
           <h3 className="font-semibold font-sans text-2xl">{title}</h3>
         </ViewTransition>
         <p className="font-normal text-base">{description}</p>
+        {CustomComponent && <CustomComponent />}
         {iFrameUrl && (
           <iframe
             className="w-full min-h-[500px] border rounded-xl"

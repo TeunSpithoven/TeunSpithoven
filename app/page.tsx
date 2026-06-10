@@ -89,6 +89,7 @@ export default function Home() {
             alt={"portret photo of Teun Spithoven with transparent background"}
             width={500}
             height={500}
+            loading="eager"
           />
         </div>
       </div>

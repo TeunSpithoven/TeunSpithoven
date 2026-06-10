@@ -5,9 +5,20 @@ export type Project = {
   images: string[];
   iFrameUrl?: string;
   websiteUrl?: string;
+  componentName?: string;
 };
 
 export const projects = [
+  {
+    id: "eurodollarconverter",
+    title: "Euro Dollar Converter",
+    description: `In my first semester I learned my first programming language: C#.
+      During this semester I learned about programming by making practical
+      assignments, by making an application that converts euros to dollars.
+      This is the project recreated in javascript.`,
+    images: ["/assets/S1/eurodollarconverter.png"],
+    componentName: "EuroDollarConverter",
+  },
   {
     id: "shop-register-system",
     title: "Shop Register System",
@@ -28,6 +39,21 @@ export const projects = [
       "/assets/S1/eloscheduleitemform.png",
       "/assets/S1/classdiagram.png",
     ],
+  },
+  {
+    id: "circustrain",
+    title: "Circus Train",
+    description: `A C# .NET application that sorts circus animals into train wagons in
+      the most efficient way, without braking any of the given rules. My
+      application designing skills improved a lot because of this exercise.
+      For this project I also wrote unit- and integration tests. Below is a
+      recreation of the project in javascript.`,
+    images: [
+      "/assets/S2/circustrein-screenshot.png",
+      "/assets/S2/circustreinflowchart.png",
+      "/assets/S2/circustrein-solution.png",
+    ],
+    componentName: "Circustrain",
   },
   {
     id: "bolus-calculator",
