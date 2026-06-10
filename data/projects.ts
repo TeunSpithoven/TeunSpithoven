@@ -107,6 +107,13 @@ export const projects = [
     websiteUrl: "https://teunspithoven.github.io/lees-dit-niet/",
   },
   {
+    id: "teunspithoven",
+    title: "teunspithoven.nl",
+    description: `Persoonlijke portfolio website. Deze website is gemaakt met Next.js, Typescript en Tailwind CSS.`,
+    images: [],
+    websiteUrl: "https://teunspithoven.nl/",
+  },
+  {
     id: "s6-group",
     title: "Appsemble",
     description: `Voor Appsemble hebben we als projectgroep de opdracht gekregen om appsemble als enterprise systeem te upgraden.

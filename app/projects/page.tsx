@@ -84,6 +84,14 @@ export default function ProjectList() {
                 <ProjectLink name="Pro6pp Admin CMS" href="/projects/pro6pp" />
               </ViewTransition>
             </ProjectColumn> */}
+            <ProjectColumn title="Tussendoor">
+              <ViewTransition name="project-teunspithoven">
+                <ProjectLink
+                  name="teunspithoven.nl"
+                  href="/projects/teunspithoven"
+                />
+              </ViewTransition>
+            </ProjectColumn>
             <ProjectColumn title="Semester 6">
               <ViewTransition name="project-s6-group">
                 <ProjectLink name="Appsemble" href="/projects/s6-group" />
