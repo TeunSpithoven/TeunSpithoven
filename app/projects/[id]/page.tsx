@@ -11,7 +11,7 @@ const componentMap: Record<string, React.ComponentType> = {
   EuroDollarConverter: dynamic(
     () => import("@/components/euroDollarConverter"),
   ),
-  Circustrain: dynamic(() => import("@/components/circustrain/circustrain")),
+  Circustrain: dynamic(() => import("@/components/circustrain")),
 };
 
 interface Params {
