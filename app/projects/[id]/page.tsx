@@ -12,6 +12,7 @@ const componentMap: Record<string, React.ComponentType> = {
     () => import("@/components/euroDollarConverter"),
   ),
   Circustrain: dynamic(() => import("@/components/circustrain")),
+  Sudoku: dynamic(() => import("@/components/sudoku")),
 };
 
 interface Params {

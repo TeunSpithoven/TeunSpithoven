@@ -117,6 +117,11 @@ export default function ProjectList() {
                 />
               </ViewTransition>
             </ProjectColumn>
+            <ProjectColumn title="2026">
+              <ViewTransition name="project-sudoku">
+                <ProjectLink name="Sudoku" href="/projects/sudoku" />
+              </ViewTransition>
+            </ProjectColumn>
           </div>
         </div>
       </div>

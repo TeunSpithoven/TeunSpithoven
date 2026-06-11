@@ -2,7 +2,7 @@ export type Project = {
   id: string;
   title: string;
   description: string;
-  images: string[];
+  images?: string[];
   iFrameUrl?: string;
   websiteUrl?: string;
   componentName?: string;
@@ -97,21 +97,12 @@ export const projects = [
     description: `This was my first project in colaboration with Austrian students. 
       We made a software project planning application. 
       With bimpi you could do anything from brainstorming to specifying requirements for software applications.`,
-    images: [],
   },
   {
     id: "lees-dit-niet",
     title: "Lees Dit Niet",
     description: `Open op eigen risico.`,
-    images: [],
     websiteUrl: "https://teunspithoven.github.io/lees-dit-niet/",
-  },
-  {
-    id: "teunspithoven",
-    title: "teunspithoven.nl",
-    description: `Persoonlijke portfolio website. Deze website is gemaakt met Next.js, Typescript en Tailwind CSS.`,
-    images: [],
-    websiteUrl: "https://teunspithoven.nl/",
   },
   {
     id: "s6-group",
@@ -124,7 +115,6 @@ export const projects = [
       Daarnaast heb ik ook met een aantal tools de appsemble applicatie gescanned op kwetsbaarheden. Daar heb ik vervolgens issues
         voor gemaakt en ben ik aan de slag gegaan om ze op te lossen.
     `,
-    images: [],
   },
   {
     id: "s6-individual",
@@ -137,7 +127,6 @@ export const projects = [
        op Azure kubernetes service.
       Ook heb ik mijn handen vies gemaakt aan infrastructure as code met Pulumi.
     `,
-    images: [],
     iFrameUrl: "https://boerenboodschap.teunspithoven.nl",
   },
   {
@@ -155,7 +144,6 @@ export const projects = [
       de code voor het berekenen van de hoek van een geluidsbron en de code voor het berekenen van 
       snijpunten van hoeken om zo de locatie van de geluidsbron te achterhalen.
     `,
-    images: [],
   },
   {
     id: "s7-individual",
@@ -167,7 +155,18 @@ export const projects = [
       Tot nu toe is er een applicatie die microfoon input met FFT omzet naar een mooi staafdiagram.
       Nu moet ik nog de logica toevoegen om de frequentie van een tennisracket te isoleren zodat ik die terug kan geven aan de gebruiker.
     `,
-    images: [],
     iFrameUrl: "https://teunspithoven.github.io/racketspanningsmeter/",
   },
+  {
+    id: "teunspithoven",
+    title: "teunspithoven.nl",
+    description: `Persoonlijke portfolio website. Deze website is gemaakt met Next.js, Typescript en Tailwind CSS.`,
+    websiteUrl: "https://teunspithoven.nl/",
+  },
+  // {
+  //   id: "sudoku",
+  //   title: "Sudoku",
+  //   description: "Incomplete sudoku generator in React.",
+  //   componentName: "Sudoku",
+  // },
 ];
