@@ -1,19 +1,37 @@
-import { projects, type Project } from "@/data/projects";
+import {
+  projects,
+  type EmbeddedComponentName,
+  type Project,
+  type ProjectComponent,
+} from "@/data/projects";
 import NavButton from "@/components/navButton";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import ProjectLink from "@/components/projectLink";
-import { ViewTransition } from "react";
+import Persona from "@/components/persona";
+import { ViewTransition, type ReactNode } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
-const componentMap: Record<string, React.ComponentType> = {
+const componentMap: Record<EmbeddedComponentName, React.ComponentType> = {
   EuroDollarConverter: dynamic(
     () => import("@/components/euroDollarConverter"),
   ),
   Circustrain: dynamic(() => import("@/components/circustrain")),
   Sudoku: dynamic(() => import("@/components/sudoku")),
 };
+
+function renderProjectComponent(
+  component: ProjectComponent,
+  key: string,
+): ReactNode {
+  if (component.componentName === "Persona") {
+    return <Persona key={key} {...component} />;
+  }
+
+  const CustomComponent = componentMap[component.componentName];
+  return <CustomComponent key={key} />;
+}
 
 interface Params {
   id: string;
@@ -37,10 +55,8 @@ export default async function ProjectPage({
 
   if (!project) notFound();
 
-  const { title, description, images, iFrameUrl, websiteUrl, componentName } =
+  const { title, description, images, iFrameUrl, websiteUrl, components } =
     project;
-
-  const CustomComponent = componentName ? componentMap[componentName] : null;
 
   return (
     <div className="flex h-screen w-screen px-4 md:px-20 lg:px-40 pt-10 md:pt-0">
@@ -57,12 +73,44 @@ export default async function ProjectPage({
         text="👈Projects"
         href="/projects"
       />
-      <div className="flex w-full flex-col gap-4 items-center justify-start pt-4 md:px-20 lg:px-30 xl:px-40 md:pt-0 md:mt-36 h-fit font-bold text-6xl">
+      <div className="project-page-content flex w-full flex-col items-start justify-start pt-4 md:px-20 lg:px-30 xl:px-40 md:pt-0 md:mt-36 h-fit">
         <ViewTransition name={`project-${id}`}>
-          <h3 className="font-semibold font-sans text-2xl">{title}</h3>
+          <h1>{title}</h1>
         </ViewTransition>
-        <p className="font-normal text-base">{description}</p>
-        {CustomComponent && <CustomComponent />}
+        <p>{description}</p>
+        {components && (
+          <div className="flex w-full flex-col items-center pb-10">
+            {components.map((component, index) =>
+              renderProjectComponent(
+                component,
+                `${component.componentName}-${index}`,
+              ),
+            )}
+          </div>
+        )}
+        {project.sections && (
+          <div className="flex w-full flex-col gap-8 pb-10">
+            {project.sections.map((section) => (
+              <section
+                className="flex w-full flex-col items-start gap-4"
+                key={section.title}
+              >
+                <h2>{section.title}</h2>
+                {section.description && <p>{section.description}</p>}
+                {section.components && (
+                  <div className="flex w-full flex-col items-center gap-6">
+                    {section.components.map((component, index) =>
+                      renderProjectComponent(
+                        component,
+                        `${section.title}-${component.componentName}-${index}`,
+                      ),
+                    )}
+                  </div>
+                )}
+              </section>
+            ))}
+          </div>
+        )}
         {iFrameUrl && (
           <iframe
             className="w-full min-h-[500px] border rounded-xl"
@@ -75,10 +123,10 @@ export default async function ProjectPage({
           <ProjectLink href={websiteUrl} name="Ga naar website →" />
         )}
         {images && (
-          <div className="flex gap-4 flex-row items-center flex-wrap w-screen px-10 pb-10 justify-center">
+          <div className="flex w-full flex-wrap items-start justify-start gap-4 pb-10">
             {images.map((image) => (
               <Image
-                className="object-contain text-md"
+                className="h-auto max-w-full object-contain"
                 key={image}
                 src={image}
                 alt="project image"

@@ -5,6 +5,7 @@ import ProjectLink from "@/components/projectLink";
 import NavButton from "@/components/navButton";
 import { ViewTransition } from "react";
 import { useScrollRestoration } from "@/hooks/useScrollRestoration";
+import Project from "@/components/project";
 
 export default function ProjectList() {
   useScrollRestoration();
@@ -13,7 +14,7 @@ export default function ProjectList() {
     <>
       <div className="h-screen flex px-4 md:px-20 lg:px-40 pt-10 md:pt-0">
         <ViewTransition name="projects">
-          <h2 className="hidden 2xl:block absolute font-mono text-black subpixel-antialiased text-9xl/[1.5] left-0 top-1/2 rotate-90 -translate-x-1/4 -translate-y-1/4 px-4 py-3">
+          <h2 className="hidden 2xl:block absolute font-mono text-black subpixel-antialiased text-9xl/[1.5] left-0 top-1/2 rotate-90 -translate-x-1/4 -translate-y-1/4 px-4 py-3 m-0 font-normal tracking-normal">
             Projects
           </h2>
         </ViewTransition>
@@ -120,6 +121,11 @@ export default function ProjectList() {
             {/* <ProjectColumn title="2026">
               <ViewTransition name="project-sudoku">
                 <ProjectLink name="Sudoku" href="/projects/sudoku" />
+              </ViewTransition>
+            </ProjectColumn> */}
+            {/* <ProjectColumn title="Google UX Design Course">
+              <ViewTransition name="project-adoptie-app">
+                <ProjectLink name="Adoptie App" href="/projects/adoptie-app" />
               </ViewTransition>
             </ProjectColumn> */}
           </div>

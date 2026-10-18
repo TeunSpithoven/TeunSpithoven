@@ -1,3 +1,32 @@
+export type PersonaSection = {
+  componentName: "Persona";
+  name: string;
+  imageUrl: string;
+  demographics: {
+    age: number;
+    gender: string;
+    education?: string;
+    family: string;
+    occupation: string;
+  };
+  quote: string;
+  goals: string[];
+  frustrations: string[];
+  story: string;
+};
+
+export type EmbeddedComponentName =
+  "EuroDollarConverter" | "Circustrain" | "Sudoku";
+
+export type ProjectComponent =
+  PersonaSection | { componentName: EmbeddedComponentName };
+
+export type ProjectSection = {
+  title: string;
+  description?: string;
+  components?: ProjectComponent[];
+};
+
 export type Project = {
   id: string;
   title: string;
@@ -5,10 +34,11 @@ export type Project = {
   images?: string[];
   iFrameUrl?: string;
   websiteUrl?: string;
-  componentName?: string;
+  components?: ProjectComponent[];
+  sections?: ProjectSection[];
 };
 
-export const projects = [
+export const projects: Project[] = [
   {
     id: "eurodollarconverter",
     title: "Euro Dollar Converter",
@@ -17,7 +47,7 @@ export const projects = [
       assignments, by making an application that converts euros to dollars.
       This is the project recreated in javascript.`,
     images: ["/assets/S1/eurodollarconverter.png"],
-    componentName: "EuroDollarConverter",
+    components: [{ componentName: "EuroDollarConverter" }],
   },
   {
     id: "shop-register-system",
@@ -53,7 +83,7 @@ export const projects = [
       "/assets/S2/circustreinflowchart.png",
       "/assets/S2/circustrein-solution.png",
     ],
-    componentName: "Circustrain",
+    components: [{ componentName: "Circustrain" }],
   },
   {
     id: "bolus-calculator",
@@ -167,6 +197,68 @@ export const projects = [
   //   id: "sudoku",
   //   title: "Sudoku",
   //   description: "Incomplete sudoku generator in React.",
-  //   componentName: "Sudoku",
+  //   components: [{ componentName: "Sudoku" }],
   // },
+  {
+    id: "adoptie-app",
+    title: "Adoptie App",
+    description:
+      "Als oefenproject voor de Google UX professional course heb ik een adoptie app ontworpen. Voor dit project heb ik het design thinking framework gevolgd.",
+    sections: [
+      {
+        title: "Fase 1: Empathize",
+        description: `In deze fase heb ik interviews afgenomen met mensen die in de afgelopen jaren een huisdier hebben geadopteerd en mensen die van plan zijn om in de toekomst een huisdier te adopteren. Het interview met de asielmedewerker heb ik met Gemini gedaan in een rollenspel. Vanuit de interviews heb ik empathy maps, user journeys, persona's en user stories gemaakt.`,
+      },
+      {
+        title: "Personas",
+        description: `Op basis van de interviews en empathy maps heb ik onderandere deze twee personas gemaakt:`,
+        components: [
+          {
+            componentName: "Persona",
+            name: "Bart",
+            imageUrl: "/assets/personas/bart.jpg",
+            demographics: {
+              age: 50,
+              gender: "Man",
+              education: "Universitair opgeleid",
+              family: "Getrouwd met Josefien, twee kinderen.",
+              occupation: "ZZP-werktuigbouwkundige",
+            },
+            quote: "N zomer niet geBBQed is een jaar niet geleefd.",
+            goals: [
+              "De emotionele ontwikkeling van zijn kinderen ondersteunen",
+              "Meer bewegen",
+            ],
+            frustrations: [
+              "Doorgefokte honden met raskwaaltjes",
+              "Kleine, rat-achtige honden",
+            ],
+            story:
+              "Bart is een ZZP-werktuigbouwkundige. In het weekend gaat hij graag mountainbiken of barbecueën met vrienden. Hij wil een hond in huis halen voor meer reuring en de emotionele ontwikkeling van zijn kinderen. Zelf zoekt hij een sportieve hond die mee kan wandelen; zijn vrouw Josefien heeft liever een kleine hond die op schoot kan. Zijn kinderen zitten op de basis- en middelbare school.",
+          },
+          {
+            componentName: "Persona",
+            name: "Sandra",
+            imageUrl: "/assets/personas/sandra.jpg",
+            demographics: {
+              age: 42,
+              gender: "Vrouw",
+              family: "Getrouwd, twee pubers in huis.",
+              occupation: "Dierverzorgings- en adoptiecoördinator",
+            },
+            quote:
+              "Je gaat werken in een asiel vanuit passie voor dieren, maar een groot deel van de dag ben je een soort logistiek manager en helpdeskmedewerker die tegen verouderde systemen vecht.",
+            goals: ["Asieldieren blij zien in een nieuw huishouden"],
+            frustrations: [
+              "No-shows bij kennismakingsafspraken",
+              "Heen-en-weermails over afspraken en vragen",
+              "Afspraken afzeggen omdat het dier inmiddels is geadopteerd",
+            ],
+            story:
+              "Sandra is een hardwerkende dierverzorgings- en adoptiecoördinator bij een asiel. Ze stuurt vrijwilligers aan en is verantwoordelijk voor de dierverzorging en het adoptieproces. Wanneer een nieuw dier binnenkomt, voegt ze medische gegevens, een beschrijving en foto's toe aan de website en kopieert die informatie naar social media. Het mooiste vindt ze wanneer een bang of mishandeld dier uiteindelijk een goed leven krijgt bij nieuwe adoptieouders. De administratie kost veel tijd: afspraken worden via mail en telefoon gemaakt, ongeveer één op de vijf mensen komt niet opdagen en potentiële adopteerders hebben veel vragen. Transparantie over de dieren is voor haar heel belangrijk.",
+          },
+        ],
+      },
+    ],
+  },
 ];
