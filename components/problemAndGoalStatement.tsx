@@ -8,7 +8,7 @@ export default function ProblemAndGoalStatement({
   goalStatement,
 }: ProblemAndGoalStatementSection) {
   return (
-    <article className="flex w-full flex-col gap-6  bg-white shadow-sm">
+    <article className="flex w-full flex-col bg-white shadow-sm">
       <div className="flex items-center gap-2">
         {personaImageUrl ? (
           <Image
