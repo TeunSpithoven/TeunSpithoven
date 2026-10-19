@@ -9,6 +9,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import ProjectLink from "@/components/projectLink";
 import Persona from "@/components/persona";
+import ProblemAndGoalStatement from "@/components/problemAndGoalStatement";
 import { ViewTransition, type ReactNode } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
@@ -27,6 +28,10 @@ function renderProjectComponent(
 ): ReactNode {
   if (component.componentName === "Persona") {
     return <Persona key={key} {...component} />;
+  }
+
+  if (component.componentName === "ProblemAndGoalStatement") {
+    return <ProblemAndGoalStatement key={key} {...component} />;
   }
 
   const CustomComponent = componentMap[component.componentName];

@@ -1,7 +1,7 @@
 export type PersonaSection = {
   componentName: "Persona";
   name: string;
-  imageUrl: string;
+  imageUrl?: string;
   demographics: {
     age: number;
     gender: string;
@@ -15,11 +15,21 @@ export type PersonaSection = {
   story: string;
 };
 
+export type ProblemAndGoalStatementSection = {
+  componentName: "ProblemAndGoalStatement";
+  personaName: string;
+  personaImageUrl?: string;
+  problemStatement: string;
+  goalStatement: string;
+};
+
 export type EmbeddedComponentName =
   "EuroDollarConverter" | "Circustrain" | "Sudoku";
 
 export type ProjectComponent =
-  PersonaSection | { componentName: EmbeddedComponentName };
+  | PersonaSection
+  | ProblemAndGoalStatementSection
+  | { componentName: EmbeddedComponentName };
 
 export type ProjectSection = {
   title: string;
@@ -256,6 +266,67 @@ export const projects: Project[] = [
             ],
             story:
               "Sandra is een hardwerkende dierverzorgings- en adoptiecoördinator bij een asiel. Ze stuurt vrijwilligers aan en is verantwoordelijk voor de dierverzorging en het adoptieproces. Wanneer een nieuw dier binnenkomt, voegt ze medische gegevens, een beschrijving en foto's toe aan de website en kopieert die informatie naar social media. Het mooiste vindt ze wanneer een bang of mishandeld dier uiteindelijk een goed leven krijgt bij nieuwe adoptieouders. De administratie kost veel tijd: afspraken worden via mail en telefoon gemaakt, ongeveer één op de vijf mensen komt niet opdagen en potentiële adopteerders hebben veel vragen. Transparantie over de dieren is voor haar heel belangrijk.",
+          },
+          {
+            componentName: "Persona",
+            name: "Joost",
+            imageUrl: "/assets/personas/joost.jpg",
+            demographics: {
+              age: 63,
+              gender: "Man",
+              family: "Getrouwd, geen kinderen thuis.",
+              occupation: "Vulploegleider bij Jumbo",
+            },
+            quote: "Wanne boer nie kent da vreet ie nie.",
+            goals: ["Gezelschap en reuring in het huishouden"],
+            frustrations: ["Wat voor dier is de juiste voor mijn situatie?"],
+            story:
+              "Joost is een 63-jarige vulploegleider bij Jumbo. Hij woont samen met zijn vrouw in een dorp en heeft nog een aantal jaren te gaan tot zijn pensioen. Sinds hun kinderen verderop zijn verhuisd, missen ze wat levendigheid in huis. Daarom willen ze graag een huisdier adopteren. Ze weten nog niet wat voor dier bij hen past, zolang het maar energiek en relatief onderhoudsvriendelijk is.",
+          },
+        ],
+      },
+      {
+        title: "Fase 2: Define",
+        description: `In deze fase heb ik op basis van de personas problem en goal statements gemaakt. Ook heb ik een competitieve analyse gemaakt en vanuit daar een unique value proposition geformuleerd.`,
+      },
+      {
+        title: "Problem- en goal statements",
+        components: [
+          {
+            componentName: "ProblemAndGoalStatement",
+            personaName: "Sandra",
+            personaImageUrl: "/assets/personas/sandra.jpg",
+            problemStatement:
+              "Sandra is een adoptiecoordinator die eenmalige gegevensinvoer wil efficiente administratie zodat ze meer tijd door kan brengen met de dieren en minder dubbel werk aan het doen is.",
+            goalStatement: `Onze adoptie app laat gebruikers gemakkelijk gegevens invoeren voor de dieren in het asiel, dit heeft effect op medewerkers van het asiel door hun tijd te besparen.
+We meten de effectiviteit door het aantal uren aan administratie te meten en vergelijken met de tijd zonder gebruik van de app.`,
+          },
+          {
+            componentName: "ProblemAndGoalStatement",
+            personaName: "Sandra",
+            personaImageUrl: "/assets/personas/sandra.jpg",
+            problemStatement:
+              "Sandra is een adoptiecoordinator die geen no-shows wil bij bezoekuren, zodat asieldieren zo snel mogelijk een nieuw thuis hebben.",
+            goalStatement: `Onze adoptie app laat gebruikers reminders ontvangen voor bezoekafspraken, dit heeft invloed op de asielmedewerkers zodat ze minder no-shows hebben van mensen die hun afspraak zijn vergeten.
+We meten de effectiviteit hiervan door het aantal no shows voor en na het gebruik van de app te meten.`,
+          },
+          {
+            componentName: "ProblemAndGoalStatement",
+            personaName: "Bart",
+            personaImageUrl: "/assets/personas/bart.jpg",
+            problemStatement:
+              "Als werkende vader van twee kinderen wil ik snel een energieke hond zonder raskwalen vinden, met een transparante medische historie, zodat ik kan bewegen en samen met mijn kinderen de hond kan trainen.",
+            goalStatement: `Onze adoptie app laat gebruikers dieren vinden op basis van de eigenschappen die ze belangrijk vinden. Dit heeft effect op adopteerders doordat de app dieren toont die aansluiten bij hun wensen.
+We meten dit door te kijken of gebruikers met zelfvertrouwen tot een zoekopdracht komen.`,
+          },
+          {
+            componentName: "ProblemAndGoalStatement",
+            personaName: "Joost",
+            personaImageUrl: "/assets/personas/joost.jpg",
+            problemStatement:
+              "Joost is een bijna-pensionado die een energiek en onderhoudsvriendelijk dier wil vinden, zodat hij reuring in het huishouden kan brengen wanneer hij met pensioen is.",
+            goalStatement: `Onze adoptie app laat gebruikers gemakkelijk dieren vinden op basis van de gewenste diereigenschappen. Dit heeft invloed op adopteerders die op zoek zijn naar een huisdier, omdat ze goed geïnformeerd worden over de opties en effectief het dier kunnen vinden dat het beste aan hun eisen voldoet.
+We meten de effectiviteit door te meten hoe vaak gebruikers aangeven dat ze niet weten wat voor dier ze zoeken en uiteindelijk tot een concrete zoekopdracht komen.`,
           },
         ],
       },
