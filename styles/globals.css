@@ -123,6 +123,10 @@ p {
   margin-block: 0 1em;
 }
 
+ul {
+  list-style: disc outside;
+}
+
 h1 {
   margin-block: 0 0.5em;
   font-size: var(--type-h1);

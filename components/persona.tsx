@@ -22,7 +22,7 @@ export default function Persona({
           <div
             role="img"
             aria-label={`Portrait of ${name}`}
-            className="flex h-60 w-60 items-center justify-center rounded-md bg-gray-200 text-gray-600"
+            className="flex h-60 w-60 items-center justify-center rounded-md bg-gray-200"
           >
             {name.charAt(0).toUpperCase()}
           </div>
@@ -39,7 +39,7 @@ export default function Persona({
         <h3>{name}</h3>
         <section>
           <h4>Demographics</h4>
-          <dl className="space-y-1 text-gray-700">
+          <dl>
             <div>
               <dt className="inline font-bold">Leeftijd: </dt>
               <dd className="inline">{demographics.age}</dd>
@@ -68,15 +68,13 @@ export default function Persona({
 
       <div className="flex flex-col gap-6">
         {quote && (
-          <blockquote className="text-center text-gray-600 my-12">
-            “{quote}”
-          </blockquote>
+          <blockquote className=" text-center my-12">“{quote}”</blockquote>
         )}
 
         <section className="flex flex-row gap-6">
           <section className="w-full">
             <h4>Doelen</h4>
-            <ul className="list-inside list-disc space-y-1 text-gray-700">
+            <ul>
               {goals.map((goal) => (
                 <li key={goal}>{goal}</li>
               ))}
@@ -84,7 +82,7 @@ export default function Persona({
           </section>
           <section className="w-full">
             <h4>Frustraties</h4>
-            <ul className="list-inside list-disc space-y-1 text-gray-700">
+            <ul>
               {frustrations.map((frustration) => (
                 <li key={frustration}>{frustration}</li>
               ))}
@@ -94,7 +92,7 @@ export default function Persona({
 
         <section className="sm:col-span-2">
           <h4>Verhaal</h4>
-          <p className="text-gray-700">{story}</p>
+          <p>{story}</p>
         </section>
       </div>
     </article>

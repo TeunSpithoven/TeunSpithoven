@@ -32,11 +32,11 @@ export default function ProblemAndGoalStatement({
       <div className="grid w-full gap-6 md:grid-cols-2">
         <section className="flex flex-col gap-2">
           <h4>Problem statement</h4>
-          <p className="text-gray-700">{problemStatement}</p>
+          <p>{problemStatement}</p>
         </section>
         <section className="flex flex-col gap-2">
           <h4>Goal statement</h4>
-          <p className="text-gray-700">{goalStatement}</p>
+          <p>{goalStatement}</p>
         </section>
       </div>
     </article>
