@@ -23,12 +23,32 @@ export type ProblemAndGoalStatementSection = {
   goalStatement: string;
 };
 
+export type BigBulletListSection = {
+  componentName: "BigBulletList";
+  items: string[];
+};
+
+export type JourneyMapSection = {
+  componentName: "JourneyMap";
+  personaName: string;
+  personaImageUrl: string;
+  goal: string;
+  stages: {
+    action: string;
+    tasks: string[];
+    feelings: string[];
+  }[];
+  improvements: string[];
+};
+
 export type EmbeddedComponentName =
   "EuroDollarConverter" | "Circustrain" | "Sudoku";
 
 export type ProjectComponent =
   | PersonaSection
   | ProblemAndGoalStatementSection
+  | BigBulletListSection
+  | JourneyMapSection
   | { componentName: EmbeddedComponentName };
 
 export type ProjectSection = {
@@ -290,6 +310,95 @@ export const projects: Project[] = [
         description: `In deze fase heb ik op basis van de personas problem en goal statements gemaakt. Ook heb ik een competitieve analyse gemaakt en vanuit daar een unique value proposition geformuleerd.`,
       },
       {
+        title: "User journey maps",
+        components: [
+          {
+            componentName: "JourneyMap",
+            personaName: "Joost",
+            personaImageUrl: "/assets/personas/joost.jpg",
+            goal: "Een energiek en onderhoudsvriendelijk huisdier om extra leven in het huishouden te roepen.",
+            stages: [
+              {
+                action:
+                  "Vind een dier dat energiek en onderhoudsvriendelijk is.",
+                tasks: [
+                  "A: Open de app.",
+                  "B: Zoek naar dieren die energiek en onderhoudsvriendelijk zijn.",
+                  "C: Maak een keuze.",
+                ],
+                feelings: ["Onzeker"],
+              },
+              {
+                action: "Plan een afspraak in om kennis te maken.",
+                tasks: [
+                  "A: Bekijk tijdsloten.",
+                  "B: Vind een beschikbare tijd die overeenkomt met de eigen agenda.",
+                  "C: Plan de afspraak.",
+                ],
+                feelings: ["Zoekend"],
+              },
+              {
+                action: "Adopteer het dier.",
+                tasks: [
+                  "A: Ga op bezoek bij het asiel.",
+                  "B: Neem het papierwerk door.",
+                  "C: Teken, reken af en neem het dier mee.",
+                  "D: Ontvang informatie van het asiel en zoek later meer op over de verzorging van het dier.",
+                ],
+                feelings: ["Blij"],
+              },
+            ],
+            improvements: [
+              "Benoem verschillende opties op basis van ingegeven eigenschappen en licht de voor- en nadelen toe, zodat adopteerders die nog niet weten wat voor dier ze willen worden begeleid.",
+              "Roep potentiële adopteerders alvast op om informatie over de verzorging van het dier te verzamelen.",
+              "Onderzoek of het proces rond administratie en papierwerk soepeler kan, bijvoorbeeld met een documentprintknop in de app.",
+            ],
+          },
+          {
+            componentName: "JourneyMap",
+            personaName: "Sandra",
+            personaImageUrl: "/assets/personas/sandra.jpg",
+            goal: "Een nieuw huisje voor het asieldier.",
+            stages: [
+              {
+                action: "Dier ontvangen en registreren.",
+                tasks: [
+                  "A: Ontvang het dier.",
+                  "B: Voer een medische en gedragscontrole uit.",
+                  "C: Registreer het dier.",
+                ],
+                feelings: ["Nieuwsgierig"],
+              },
+              {
+                action: "Afspraak met potential.",
+                tasks: [
+                  "A: Zet het dier op tijdsloten.",
+                  "B: Beantwoord online vragen van potentials.",
+                  "C: Laat de potential bij het dier komen kijken.",
+                ],
+                feelings: ["Verveling", "Frustratie", "Geïrriteerd"],
+              },
+              {
+                action: "Dier mee met baasje.",
+                tasks: [
+                  "A: Teken de adoptieovereenkomst.",
+                  "B: Geef het dierenpaspoort en eventueel het medisch dossier mee.",
+                  "C: Zet de chipregistratie over.",
+                  "D: Controleer de legitimatie en reken af.",
+                ],
+                feelings: ["Voldaan"],
+              },
+            ],
+            improvements: [
+              "Gebruik spraak-naar-tekst met AI om automatisch de relevante velden in te vullen, zodat je informatie kunt inspreken.",
+              "Maak de invoer van gegevens efficiënter.",
+              "Laat een chatbot veelgestelde vragen automatisch beantwoorden.",
+              "Automatiseer zoveel mogelijk van de boekhouding.",
+            ],
+          },
+        ],
+      },
+      {
         title: "Problem- en goal statements",
         components: [
           {
@@ -327,6 +436,19 @@ We meten dit door te kijken of gebruikers met zelfvertrouwen tot een zoekopdrach
               "Joost is een bijna-pensionado die een energiek en onderhoudsvriendelijk dier wil vinden, zodat hij reuring in het huishouden kan brengen wanneer hij met pensioen is.",
             goalStatement: `Onze adoptie app laat gebruikers gemakkelijk dieren vinden op basis van de gewenste diereigenschappen. Dit heeft invloed op adopteerders die op zoek zijn naar een huisdier, omdat ze goed geïnformeerd worden over de opties en effectief het dier kunnen vinden dat het beste aan hun eisen voldoet.
 We meten de effectiviteit door te meten hoe vaak gebruikers aangeven dat ze niet weten wat voor dier ze zoeken en uiteindelijk tot een concrete zoekopdracht komen.`,
+          },
+        ],
+      },
+      {
+        title: "Unique value propositions",
+        components: [
+          {
+            componentName: "BigBulletList",
+            items: [
+              "Eenmalige gegevensinvoer met social media automatisering.",
+              "Filters voor energieniveau en ras (of rasloos).",
+              "Afspraak reminders.",
+            ],
           },
         ],
       },

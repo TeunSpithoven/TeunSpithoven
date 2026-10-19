@@ -10,6 +10,8 @@ import { notFound } from "next/navigation";
 import ProjectLink from "@/components/projectLink";
 import Persona from "@/components/persona";
 import ProblemAndGoalStatement from "@/components/problemAndGoalStatement";
+import BigBulletList from "@/components/bigBulletList";
+import JourneyMap from "@/components/journeyMap";
 import { ViewTransition, type ReactNode } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
@@ -32,6 +34,14 @@ function renderProjectComponent(
 
   if (component.componentName === "ProblemAndGoalStatement") {
     return <ProblemAndGoalStatement key={key} {...component} />;
+  }
+
+  if (component.componentName === "BigBulletList") {
+    return <BigBulletList key={key} {...component} />;
+  }
+
+  if (component.componentName === "JourneyMap") {
+    return <JourneyMap key={key} {...component} />;
   }
 
   const CustomComponent = componentMap[component.componentName];
