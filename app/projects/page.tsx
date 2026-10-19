@@ -123,11 +123,11 @@ export default function ProjectList() {
                 <ProjectLink name="Sudoku" href="/projects/sudoku" />
               </ViewTransition>
             </ProjectColumn> */}
-            {/* <ProjectColumn title="Google UX Design Course">
+            <ProjectColumn title="Google UX Design Course">
               <ViewTransition name="project-adoptie-app">
                 <ProjectLink name="Adoptie App" href="/projects/adoptie-app" />
               </ViewTransition>
-            </ProjectColumn> */}
+            </ProjectColumn>
           </div>
         </div>
       </div>
