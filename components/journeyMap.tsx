@@ -76,7 +76,7 @@ export default function JourneyMap({
         </tbody>
       </table>
       <h4>Verbeter mogelijkheden</h4>
-      <ul>
+      <ul className="prose-list">
         {improvements.map((improvement) => (
           <li key={improvement}>{improvement}</li>
         ))}

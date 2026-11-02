@@ -4,6 +4,7 @@
 
 :root {
   --max-width: 1100px;
+  --prose-width: 65ch;
   --border-radius: 12px;
   --type-body: 1.125rem;
   --type-h4: clamp(1.125rem, 1.1rem + 0.1vw, 1.25rem);
@@ -119,12 +120,16 @@ h4 {
 }
 
 p {
-  max-width: 65ch;
+  max-width: var(--prose-width);
   margin-block: 0 1em;
 }
 
 ul {
   list-style: disc outside;
+}
+
+.prose-list {
+  max-width: var(--prose-width);
 }
 
 h1 {
