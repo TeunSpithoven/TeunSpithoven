@@ -452,6 +452,11 @@ We meten de effectiviteit door te meten hoe vaak gebruikers aangeven dat ze niet
           },
         ],
       },
+      {
+        title: "Fase 3: Ideate",
+        description:
+          "Rapid sketching, brainstorming, How might we en competitieve analyse. Meer inhoud zal nog volgen...",
+      },
     ],
   },
 ];
