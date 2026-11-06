@@ -74,11 +74,11 @@ export default async function ProjectPage({
     project;
 
   return (
-    <div className="flex h-screen w-screen px-4 md:px-20 lg:px-40 pt-10 md:pt-0">
+    <div className="flex min-h-screen w-screen px-4 md:px-20 lg:px-40 pt-10 md:pt-0">
       <ViewTransition name="projects">
         <Link
           href="/projects"
-          className="invisible 2xl:visible absolute font-mono text-black subpixel-antialiased text-9xl/[1.5] left-0 top-1/2 rotate-90 -translate-x-1/4 -translate-y-1/4 border border-black rounded-md px-4 py-3"
+          className="invisible 2xl:visible fixed font-mono text-black subpixel-antialiased text-9xl/[1.5] left-0 top-1/2 rotate-90 -translate-x-1/4 -translate-y-1/4 border border-black rounded-md px-4 py-3"
         >
           Projects
         </Link>
@@ -103,29 +103,25 @@ export default async function ProjectPage({
             )}
           </div>
         )}
-        {project.sections && (
-          <div className="flex w-full flex-col gap-8 pb-10">
-            {project.sections.map((section) => (
-              <section
-                className="flex w-full flex-col items-start gap-4"
-                key={section.title}
-              >
-                <h2>{section.title}</h2>
-                {section.description && <p>{section.description}</p>}
-                {section.components && (
-                  <div className="flex w-full flex-col items-center gap-6">
-                    {section.components.map((component, index) =>
-                      renderProjectComponent(
-                        component,
-                        `${section.title}-${component.componentName}-${index}`,
-                      ),
-                    )}
-                  </div>
+        {project.sections?.map((section) => (
+          <section
+            className="flex w-full flex-col items-start"
+            key={section.title}
+          >
+            <h2>{section.title}</h2>
+            {section.description && <p>{section.description}</p>}
+            {section.components && (
+              <div className="flex w-full flex-col items-center">
+                {section.components.map((component, index) =>
+                  renderProjectComponent(
+                    component,
+                    `${section.title}-${component.componentName}-${index}`,
+                  ),
                 )}
-              </section>
-            ))}
-          </div>
-        )}
+              </div>
+            )}
+          </section>
+        ))}
         {iFrameUrl && (
           <iframe
             className="w-full min-h-[500px] border rounded-xl"

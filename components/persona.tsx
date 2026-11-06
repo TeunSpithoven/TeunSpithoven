@@ -16,7 +16,7 @@ export default function Persona({
   const [imageFailed, setImageFailed] = useState(false);
 
   return (
-    <article className="persona-card flex w-full flex-col gap-12 rounded-xl border border-gray-300 bg-white p-6 shadow-sm md:flex-row">
+    <article className="persona-card flex w-full flex-col gap-12 rounded-xl border border-gray-300 bg-white p-6 mt-6 shadow-sm md:flex-row">
       <div className="flex shrink-0 flex-col items-center gap-6 md:w-60">
         {!imageUrl || imageFailed ? (
           <div
