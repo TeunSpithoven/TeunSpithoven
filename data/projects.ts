@@ -463,7 +463,7 @@ We meten de effectiviteit door te meten hoe vaak gebruikers aangeven dat ze niet
         h3Heading: "Competitieve analyse",
         markdownContent: `
 
-Om een goed beeld te krijgen van wat er al op de markt is, heb ik gekeken naar zowel directe concurrenten (Aniday en PetHub) als indirecte concurrenten (Verhuisdieren en Pets Home). Ik wilde vooral zien hoe zij het adoptie- en administratieproces aanpakken.
+Om een goed beeld te krijgen van wat er al op de markt is, heb ik gekeken naar zowel directe concurrenten ([Aniday](https://www.aniday.io/nl) en [PetHub](https://pethub-app.nl)) als indirecte concurrenten ([Verhuisdieren](https://verhuisdieren.nl) en Pets Home). Ik wilde vooral zien hoe zij het adoptie- en administratieproces aanpakken.
 
 #### Wat ze goed doen
 
