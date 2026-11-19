@@ -457,6 +457,17 @@ We meten de effectiviteit door te meten hoe vaak gebruikers aangeven dat ze niet
         description:
           "Rapid sketching, brainstorming, How might we en competitieve analyse. Meer inhoud zal nog volgen...",
       },
+      {
+        title: "Competitieve analyse",
+        description: `Competitieve audit
+Om een goed beeld te krijgen van wat er al op de markt is, heb ik gekeken naar zowel directe concurrenten (Aniday en PetHub) als indirecte concurrenten (Verhuisdieren en Pets Home). Ik wilde vooral zien hoe zij het adoptie- en administratieproces aanpakken.   
+Competitive audit report
+Wat ze goed doen: Aniday en PetHub zijn echt uitgebreide all-in-one systemen met een moderne interface voor asielen en andere dierenbedrijven. Verhuisdieren en Pets Home richten zich juist meer op consumenten en hebben een veel toegankelijker zoekproces, met handige filters, zoekalerts, een chatfunctie en zelfs AI-rasherkenning.   
+Competitive audit report
+Waar het misgaat: Qua gebruiksvriendelijkheid en toegankelijkheid laten ze best wat steken vallen. Geen van de platforms heeft bijvoorbeeld goede keyboard-support, en bij sommige apps krijg je meteen een bult tekst, dubbele knoppen of een drukke interface op je scherm. Daarnaast focussen die grote systemen vooral op de administratie van het asiel en een stuk minder op de adopteerder zelf.   
+Competitive audit report
+Mijn kansen: Voor mijn ontwerp liggen er mooie kansen om die complexe administratie weer simpel en overzichtelijk te maken. Daarnaast wil ik veel betere, geavanceerde zoekfilters bouwen voor adopteerders en kijken naar slimme extra’s zoals social media-automatisering.`,
+      },
     ],
   },
 ];
