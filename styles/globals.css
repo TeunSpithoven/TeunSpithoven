@@ -108,7 +108,7 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-a {
+.markdown-content a {
   color: #0000ee;
   text-decoration: underline;
 }
