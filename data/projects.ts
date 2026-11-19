@@ -456,8 +456,6 @@ We meten de effectiviteit door te meten hoe vaak gebruikers aangeven dat ze niet
       },
       {
         h2Heading: "Fase 3: Ideate",
-        description:
-          "Rapid sketching, brainstorming, How might we en competitieve analyse. Meer inhoud zal nog volgen...",
       },
       {
         h3Heading: "Competitieve analyse",
@@ -476,6 +474,11 @@ Geen keyboard-support, af en toe meer tekst dan nodig is, dubbele knoppen of een
 #### Kansen voor dit project
 
 Geavanceerde zoekfilters voor adopteerders en social media-automatisering.`,
+      },
+      { h3Heading: "How might we", description: "todo" },
+      {
+        h3Heading: "Rapid sketching",
+        description: "todo",
       },
     ],
   },
