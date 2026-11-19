@@ -52,8 +52,10 @@ export type ProjectComponent =
   | { componentName: EmbeddedComponentName };
 
 export type ProjectSection = {
-  title: string;
+  h2Heading?: string;
+  h3Heading?: string;
   description?: string;
+  markdownContent?: string;
   components?: ProjectComponent[];
 };
 
@@ -236,11 +238,11 @@ export const projects: Project[] = [
       "Als oefenproject voor de Google UX professional course heb ik een adoptie app ontworpen. Voor dit project heb ik het design thinking framework gevolgd.",
     sections: [
       {
-        title: "Fase 1: Empathize",
+        h2Heading: "Fase 1: Empathize",
         description: `In deze fase heb ik interviews afgenomen met mensen die in de afgelopen jaren een huisdier hebben geadopteerd en mensen die van plan zijn om in de toekomst een huisdier te adopteren. Het interview met de asielmedewerker heb ik met Gemini gedaan in een rollenspel. Vanuit de interviews heb ik empathy maps, user journeys, persona's en user stories gemaakt.`,
       },
       {
-        title: "Personas",
+        h3Heading: "Personas",
         description: `Op basis van de interviews en empathy maps heb ik onderandere deze twee personas gemaakt:`,
         components: [
           {
@@ -306,11 +308,11 @@ export const projects: Project[] = [
         ],
       },
       {
-        title: "Fase 2: Define",
+        h2Heading: "Fase 2: Define",
         description: `In deze fase heb ik op basis van de personas problem en goal statements gemaakt. Ook heb ik een competitieve analyse gemaakt en vanuit daar een unique value proposition geformuleerd.`,
       },
       {
-        title: "User journey maps",
+        h3Heading: "User journey maps",
         components: [
           {
             componentName: "JourneyMap",
@@ -399,7 +401,7 @@ export const projects: Project[] = [
         ],
       },
       {
-        title: "Problem- en goal statements",
+        h3Heading: "Problem- en goal statements",
         components: [
           {
             componentName: "ProblemAndGoalStatement",
@@ -440,7 +442,7 @@ We meten de effectiviteit door te meten hoe vaak gebruikers aangeven dat ze niet
         ],
       },
       {
-        title: "Unique value propositions",
+        h3Heading: "Unique value propositions",
         components: [
           {
             componentName: "BigBulletList",
@@ -453,20 +455,27 @@ We meten de effectiviteit door te meten hoe vaak gebruikers aangeven dat ze niet
         ],
       },
       {
-        title: "Fase 3: Ideate",
+        h2Heading: "Fase 3: Ideate",
         description:
           "Rapid sketching, brainstorming, How might we en competitieve analyse. Meer inhoud zal nog volgen...",
       },
       {
-        title: "Competitieve analyse",
-        description: `Competitieve audit
-Om een goed beeld te krijgen van wat er al op de markt is, heb ik gekeken naar zowel directe concurrenten (Aniday en PetHub) als indirecte concurrenten (Verhuisdieren en Pets Home). Ik wilde vooral zien hoe zij het adoptie- en administratieproces aanpakken.   
-Competitive audit report
-Wat ze goed doen: Aniday en PetHub zijn echt uitgebreide all-in-one systemen met een moderne interface voor asielen en andere dierenbedrijven. Verhuisdieren en Pets Home richten zich juist meer op consumenten en hebben een veel toegankelijker zoekproces, met handige filters, zoekalerts, een chatfunctie en zelfs AI-rasherkenning.   
-Competitive audit report
-Waar het misgaat: Qua gebruiksvriendelijkheid en toegankelijkheid laten ze best wat steken vallen. Geen van de platforms heeft bijvoorbeeld goede keyboard-support, en bij sommige apps krijg je meteen een bult tekst, dubbele knoppen of een drukke interface op je scherm. Daarnaast focussen die grote systemen vooral op de administratie van het asiel en een stuk minder op de adopteerder zelf.   
-Competitive audit report
-Mijn kansen: Voor mijn ontwerp liggen er mooie kansen om die complexe administratie weer simpel en overzichtelijk te maken. Daarnaast wil ik veel betere, geavanceerde zoekfilters bouwen voor adopteerders en kijken naar slimme extra’s zoals social media-automatisering.`,
+        h3Heading: "Competitieve analyse",
+        markdownContent: `
+
+Om een goed beeld te krijgen van wat er al op de markt is, heb ik gekeken naar zowel directe concurrenten (Aniday en PetHub) als indirecte concurrenten (Verhuisdieren en Pets Home). Ik wilde vooral zien hoe zij het adoptie- en administratieproces aanpakken.
+
+#### Wat ze goed doen
+
+Aniday en PetHub zijn echt uitgebreide all-in-one systemen met een moderne interface voor asielen en andere dierenbedrijven. Verhuisdieren en Pets Home richten zich juist meer op consumenten en hebben een veel toegankelijker zoekproces, met handige filters, zoekalerts, een chatfunctie en zelfs AI-rasherkenning.
+
+#### Waar het misgaat
+
+Qua gebruiksvriendelijkheid en toegankelijkheid laten ze best wat steken vallen. Geen van de platforms heeft bijvoorbeeld goede keyboard-support, en bij sommige apps krijg je meteen een bult tekst, dubbele knoppen of een drukke interface op je scherm. Daarnaast focussen die grote systemen vooral op de administratie van het asiel en een stuk minder op de adopteerder zelf.
+
+#### Kansen voor dit project
+
+Voor mijn ontwerp liggen er mooie kansen om die complexe administratie weer simpel en overzichtelijk te maken. Daarnaast wil ik veel betere, geavanceerde zoekfilters bouwen voor adopteerders en kijken naar slimme extra’s zoals social media-automatisering.`,
       },
     ],
   },

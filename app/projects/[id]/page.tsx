@@ -15,6 +15,7 @@ import JourneyMap from "@/components/journeyMap";
 import { ViewTransition, type ReactNode } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import MarkdownContent from "@/components/markdownContent";
 
 const componentMap: Record<EmbeddedComponentName, React.ComponentType> = {
   EuroDollarConverter: dynamic(
@@ -106,16 +107,20 @@ export default async function ProjectPage({
         {project.sections?.map((section) => (
           <section
             className="flex w-full flex-col items-start"
-            key={section.title}
+            key={section.h2Heading ?? section.h3Heading}
           >
-            <h2>{section.title}</h2>
+            {section.h2Heading && <h2>{section.h2Heading}</h2>}
+            {section.h3Heading && <h3>{section.h3Heading}</h3>}
             {section.description && <p>{section.description}</p>}
+            {section.markdownContent && (
+              <MarkdownContent content={section.markdownContent} />
+            )}
             {section.components && (
               <div className="flex w-full flex-col items-center">
                 {section.components.map((component, index) =>
                   renderProjectComponent(
                     component,
-                    `${section.title}-${component.componentName}-${index}`,
+                    `${section.h2Heading ?? section.h3Heading}-${component.componentName}-${index}`,
                   ),
                 )}
               </div>

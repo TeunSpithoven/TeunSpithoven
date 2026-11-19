@@ -18,7 +18,7 @@ export default function JourneyMap({
           height={32}
           className="h-8 w-8 rounded-full object-cover"
         />
-        <h3 className="m-0 leading-none">{personaName}</h3>
+        <h4 className="m-0 leading-none">{personaName}</h4>
       </div>
       <p>
         <strong>Doel:</strong> {goal}

@@ -36,9 +36,9 @@ export default function Persona({
             onError={() => setImageFailed(true)}
           />
         )}
-        <h3>{name}</h3>
+        <h4>{name}</h4>
         <section>
-          <h4>Demographics</h4>
+          <h5>Demographics</h5>
           <dl>
             <div>
               <dt className="inline font-bold">Leeftijd: </dt>
@@ -73,7 +73,7 @@ export default function Persona({
 
         <section className="flex flex-row gap-6">
           <section className="w-full">
-            <h4>Doelen</h4>
+            <h5>Doelen</h5>
             <ul>
               {goals.map((goal) => (
                 <li key={goal}>{goal}</li>
@@ -81,7 +81,7 @@ export default function Persona({
             </ul>
           </section>
           <section className="w-full">
-            <h4>Frustraties</h4>
+            <h5>Frustraties</h5>
             <ul>
               {frustrations.map((frustration) => (
                 <li key={frustration}>{frustration}</li>
@@ -91,7 +91,7 @@ export default function Persona({
         </section>
 
         <section className="sm:col-span-2">
-          <h4>Verhaal</h4>
+          <h5>Verhaal</h5>
           <p>{story}</p>
         </section>
       </div>

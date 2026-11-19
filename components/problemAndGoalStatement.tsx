@@ -27,15 +27,15 @@ export default function ProblemAndGoalStatement({
             {personaName.charAt(0).toUpperCase()}
           </span>
         )}
-        <h3 className="m-0 leading-none">{personaName}</h3>
+        <h4 className="m-0 leading-none">{personaName}</h4>
       </div>
       <div className="grid w-full gap-6 md:grid-cols-2">
         <section className="flex flex-col gap-2">
-          <h4>Problem statement</h4>
+          <h5>Problem statement</h5>
           <p>{problemStatement}</p>
         </section>
         <section className="flex flex-col gap-2">
-          <h4>Goal statement</h4>
+          <h5>Goal statement</h5>
           <p>{goalStatement}</p>
         </section>
       </div>
