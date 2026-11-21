@@ -113,6 +113,10 @@ body {
   text-decoration: underline;
 }
 
+.markdown-content :is(h1, h2, h3, h4, h5, h6) {
+  max-width: var(--prose-width);
+}
+
 h1,
 h2,
 h3,
@@ -129,7 +133,8 @@ ul {
   list-style: disc outside;
 }
 
-.prose-list {
+.prose-list,
+ul {
   max-width: var(--prose-width);
   margin-block: 0 1em;
 }

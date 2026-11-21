@@ -160,7 +160,7 @@ export default function Circustrain() {
             </ul>
           ) : (
             <ul>
-              <li>No animals yet</li>
+              <p>No animals yet</p>
             </ul>
           )}
         </div>
@@ -191,7 +191,7 @@ export default function Circustrain() {
               ))}
             </ul>
           ) : (
-            <div>No train yet</div>
+            <p>No train yet</p>
           )}
         </div>
       </div>

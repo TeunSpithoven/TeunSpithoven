@@ -475,7 +475,43 @@ Geen keyboard-support, af en toe meer tekst dan nodig is, dubbele knoppen of een
 
 Geavanceerde zoekfilters voor adopteerders en social media-automatisering.`,
       },
-      { h3Heading: "How might we", description: "todo" },
+      {
+        h3Heading: "How might we",
+        markdownContent: `
+Om de creativiteit eens flink los te laten gaan heb ik voor alle problem statements een aantal 'how might we' vragen gemaakt en gebrainstormed over mogelijke oplossingen. Een paar voorbeelden:
+
+#### **Hoe kunnen we** social media automatiseren of volledig elimineren voor asieldieren?
+
+  - Automatisch een goede foto + beschrijving klaar zetten voor nieuwe dieren. Na goedkeuring met een druk op de knop live staan.
+  - DM’s op social media verbinden met een centrale chat voor de asielmedewerkers.
+  - Op basis van foto’s en video’s, ingesproken beschrijvingen en documenten automatisch gegevens laten aanvullen van dieren. Medewerkers laten controleren, systemen laten administreren.
+
+
+#### **Hoe kunnen we** administratief werk leuker maken voor asielmedewerkers?
+
+  - Performance
+  - Customizability
+  - Keyboard shortcuts voor power users
+  - Succesverhalen kunnen terugkijken
+  - Gamification
+
+
+#### **Hoe kunnen we** het makkelijk maken om het geschikte soort huisdier te vinden voor adopteerders?
+
+- Filters voor ras
+- Filters voor medische status
+- Filters voor energie niveau
+- Filters voor onderhoudsvriendelijkheid
+
+
+#### **Hoe kunnen we** hoe kunnen we diersoortkeuze eenvoudig en makkelijk maken?
+
+- Chat met dier expert
+- Wizard 🧙‍♂️ met een vaste vragenboom om uit te komen bij je ideale match.
+- Zoektochtspel waarin verschillende soorten en hun eigenschappen te ontdekken zijn. En dan kun je met iedere soort spelen/omgaan.
+- Wiki pagina met uitgebreide informatie over verschillende diersoorten, hoe ze als huisdieren zijn en bij wat voor personen ze goed passen. En bij wie niet.
+      `,
+      },
       {
         h3Heading: "Rapid sketching",
         description: "todo",
