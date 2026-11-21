@@ -75,21 +75,21 @@ export default async function ProjectPage({
     project;
 
   return (
-    <div className="flex min-h-screen w-screen px-4 md:px-20 lg:px-40 pt-10 md:pt-0">
+    <div className="flex min-h-screen w-screen px-4 md:pl-20 lg:pl-40 pt-10 md:pt-0 pb-2">
       <ViewTransition name="projects">
         <Link
           href="/projects"
-          className="invisible 2xl:visible fixed font-mono text-black subpixel-antialiased text-9xl/[1.5] left-0 top-1/2 rotate-90 -translate-x-1/4 -translate-y-1/4 border border-black rounded-md px-4 py-3"
+          className="invisible xl:visible fixed font-mono text-black subpixel-antialiased text-9xl/[1.5] left-0 top-1/2 rotate-90 -translate-x-1/4 -translate-y-1/4 border border-black rounded-md px-4 py-3"
         >
           Projects
         </Link>
       </ViewTransition>
       <NavButton
-        classNames="visible 2xl:invisible"
+        classNames="visible xl:invisible"
         text="👈Projects"
         href="/projects"
       />
-      <div className="project-page-content flex w-full flex-col items-start justify-start pt-4 md:px-20 lg:px-30 xl:px-40 md:pt-0 md:mt-36 h-fit">
+      <div className="project-page-content flex w-full flex-col items-start justify-start pt-4 md:pl-20 lg:pl-30 xl:pl-40 md:pt-0 md:mt-36 h-fit">
         <ViewTransition name={`project-${id}`}>
           <h1>{title}</h1>
         </ViewTransition>
@@ -140,7 +140,7 @@ export default async function ProjectPage({
         )}
         {images && (
           <div className="flex w-full flex-wrap items-start justify-start gap-4 pb-10">
-            {images.map((image) => (
+            {images.map((image, index) => (
               <Image
                 className="h-auto max-w-full object-contain"
                 key={image}
@@ -148,6 +148,7 @@ export default async function ProjectPage({
                 alt="project image"
                 width={500}
                 height={1000}
+                preload={index <= 2}
               />
             ))}
           </div>

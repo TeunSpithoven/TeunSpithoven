@@ -9,6 +9,7 @@
 /coverage
 /playwright-report
 /test-results
+.unlighthouse
 
 # next.js
 /.next/
