@@ -51,11 +51,17 @@ export type ProjectComponent =
   | JourneyMapSection
   | { componentName: EmbeddedComponentName };
 
+export type LazyImage = {
+  url: string;
+  altText: string;
+};
+
 export type ProjectSection = {
   h2Heading?: string;
   h3Heading?: string;
   description?: string;
   markdownContent?: string;
+  lazyImages?: LazyImage[];
   components?: ProjectComponent[];
 };
 
@@ -514,7 +520,13 @@ Om de creativiteit eens flink los te laten gaan heb ik voor alle problem stateme
       },
       {
         h3Heading: "Rapid sketching",
-        description: "todo",
+        lazyImages: [
+          {
+            url: "/assets/adoptie-app/rapid-sketching.webp",
+            altText:
+              "Rapid sketching ideeen voor het maken van afspraken zonder te bellen. 1: Postduif. 2: In virtual reality. 3: Op mobiele app. 4: Via iemand anders die voor je belt. 5: Brief op de post doen. 6: Op locatie op een bord. 7: Chat met het asiel op mobiele app. 8: Lotje trekken bij het asiel.",
+          },
+        ],
       },
     ],
   },

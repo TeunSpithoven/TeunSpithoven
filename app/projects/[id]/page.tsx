@@ -16,6 +16,7 @@ import { ViewTransition, type ReactNode } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import MarkdownContent from "@/components/markdownContent";
+import LazyImages from "@/components/lazyImages";
 
 const componentMap: Record<EmbeddedComponentName, React.ComponentType> = {
   EuroDollarConverter: dynamic(
@@ -114,6 +115,9 @@ export default async function ProjectPage({
             {section.description && <p>{section.description}</p>}
             {section.markdownContent && (
               <MarkdownContent content={section.markdownContent} />
+            )}
+            {section.lazyImages && (
+              <LazyImages images={section.lazyImages} />
             )}
             {section.components && (
               <div className="flex w-full flex-col items-center">
