@@ -117,13 +117,6 @@ body {
   max-width: var(--prose-width);
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: inherit;
-}
-
 p {
   max-width: var(--prose-width);
   margin-block: 0 1em;
@@ -137,6 +130,14 @@ ul {
 ul {
   max-width: var(--prose-width);
   margin-block: 0 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: inherit;
 }
 
 h1 {
