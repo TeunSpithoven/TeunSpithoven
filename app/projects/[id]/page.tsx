@@ -76,7 +76,7 @@ export default async function ProjectPage({
     project;
 
   return (
-    <div className="flex min-h-screen w-screen px-4 md:pl-20 lg:pl-40 pt-10 md:pt-0 pb-2">
+    <div className="flex min-h-screen w-screen px-6 xl:pl-40 pt-10 md:pt-0 pb-2">
       <ViewTransition name="projects">
         <Link
           href="/projects"
@@ -90,7 +90,7 @@ export default async function ProjectPage({
         text="👈Projects"
         href="/projects"
       />
-      <div className="project-page-content flex w-full flex-col items-start justify-start pt-4 md:pl-20 lg:pl-30 xl:pl-40 md:pt-0 md:mt-36 h-fit">
+      <div className="project-page-content flex w-full flex-col items-start justify-start pt-4 xl:pl-40 md:pt-0 md:mt-36 h-fit">
         <ViewTransition name={`project-${id}`}>
           <h1>{title}</h1>
         </ViewTransition>
@@ -116,9 +116,7 @@ export default async function ProjectPage({
             {section.markdownContent && (
               <MarkdownContent content={section.markdownContent} />
             )}
-            {section.lazyImages && (
-              <LazyImages images={section.lazyImages} />
-            )}
+            {section.lazyImages && <LazyImages images={section.lazyImages} />}
             {section.components && (
               <div className="flex w-full flex-col items-center">
                 {section.components.map((component, index) =>

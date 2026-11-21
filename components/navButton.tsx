@@ -13,7 +13,7 @@ export default function NavButton({
     <Link
       href={href}
       className={
-        "fixed left-5 md:left-20 top-5 md:top-20 border-2 border-black dark:border-white dark:bg-black bg-white text-black dark:text-white rounded-full px-2 z-50" +
+        "fixed left-5 top-5 border-2 border-black dark:border-white dark:bg-black bg-white text-black dark:text-white rounded-full px-2 z-50" +
         " " +
         (classNames || "")
       }
